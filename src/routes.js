@@ -37,13 +37,12 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Icon from "@mui/material/Icon";
 
 // @mui icons
+import { Icon } from "@mui/material";
 
 // Pages
 import SignIn from "layouts/pages/authentication/sign-in";
-import AboutUs from "layouts/pages/landing-pages/about-us";
 //View content (link to notion)
 //FAQ
 
@@ -51,10 +50,9 @@ import AboutUs from "layouts/pages/landing-pages/about-us";
 
 const routes = [
   {
-    name: "About Us",
-    icon: <Icon>dashboard</Icon>,
-    route: "/about",
-    component: <AboutUs />,
+    name: "Library",
+    icon: <Icon>article</Icon>,
+    href: "https://jade-day-f2d.notion.site/Brothas-Express-Library-5bf8e9d563014258bf168224f99bb553",
   },
   {
     // icon: <Icon>dashboard</Icon>,

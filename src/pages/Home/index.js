@@ -26,12 +26,14 @@ import FeaturesOne from "layouts/sections/page-sections/featuers/components/Feat
 // Home page sections
 
 // Home page components
-
+import FAQSection from "./components/FAQ";
 // Routes
 import footerRoutes from "footer.routes";
 import routes from "routes";
 // PageHeaders page components
 import HeaderOne from "layouts/sections/page-sections/page-headers/components/HeaderOne";
+import Profile from "pages/LandingPages/Author/sections/Profile";
+import SimpleTable from "./components/SimpleTable";
 // Images
 
 function Home() {
@@ -63,9 +65,14 @@ function Home() {
         >
           {/** Introduction */}
           <FeaturesOne></FeaturesOne>
-          {/** Members */}
           {/** Meet the Founder */}
+          <Profile></Profile>
+          {/** Members */}
+          {/* <Team></Team> */}
+          <SimpleTable></SimpleTable>
+
           {/** FAQs */}
+          <FAQSection></FAQSection>
           {/** How to get involved */}
         </Card>
         <MKBox pt={6} px={1} mt={6} mb={5}>

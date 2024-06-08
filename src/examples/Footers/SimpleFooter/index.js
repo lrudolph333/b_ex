@@ -98,6 +98,35 @@ function SimpleFooter({ company, links, light }) {
           })}
         >
           {renderLinks()}
+          <MKBox display="flex" justifyContent="center" alignItems="center">
+            <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+              <MKBox
+                component="i"
+                color="#55acee"
+                fontSize="1.125rem"
+                className="fab fa-discord"
+                sx={{ margin: "0 10px" }}
+              />
+            </Link>
+            <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <MKBox
+                component="i"
+                color="#E1306C"
+                fontSize="1.125rem"
+                className="fab fa-instagram"
+                sx={{ margin: "0 10px" }}
+              />
+            </Link>
+            <Link href="https://treyr.me" target="_blank" rel="noopener noreferrer">
+              <MKBox
+                component="i"
+                color="#000"
+                fontSize="1.125rem"
+                className="fas fa-globe"
+                sx={{ margin: "0 10px" }}
+              />
+            </Link>
+          </MKBox>
         </MKBox>
       </MKBox>
     </Container>
@@ -107,11 +136,7 @@ function SimpleFooter({ company, links, light }) {
 // Setting default values for the props of SimpleFooter
 SimpleFooter.defaultProps = {
   company: { href: "https://treyr.me/", name: "Trey" },
-  links: [
-    { href: "https://buymeacoffee.com/treyruiii", name: "Buy Me A Coffee" },
-    { href: "https://www.creative-tim.com/blog", name: "IG" }, //TODO add a field for icon
-    { href: "https://www.creative-tim.com/license", name: "Discord" },
-  ],
+  links: [{ href: "https://buymeacoffee.com/treyruiii", name: "Buy Me A Coffee" }],
   light: false,
 };
 

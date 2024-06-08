@@ -19,25 +19,21 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 // @mui material components
+import { Box } from "@mui/material";
 import Card from "@mui/material/Card";
-import Switch from "@mui/material/Switch";
 import Grid from "@mui/material/Grid";
-import MuiLink from "@mui/material/Link";
-
+import Switch from "@mui/material/Switch";
 // @mui icons
-import FacebookIcon from "@mui/icons-material/Facebook";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import GoogleIcon from "@mui/icons-material/Google";
 
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
-import MKTypography from "components/MKTypography";
-import MKInput from "components/MKInput";
 import MKButton from "components/MKButton";
+import MKInput from "components/MKInput";
+import MKTypography from "components/MKTypography";
 
 // Material Kit 2 React example components
-import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import SimpleFooter from "examples/Footers/SimpleFooter";
+import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 
 // Material Kit 2 React page layout routes
 import routes from "routes";
@@ -55,13 +51,12 @@ function SignInBasic() {
       <DefaultNavbar
         routes={routes}
         action={{
-          type: "external",
-          route: "https://www.creative-tim.com/product/material-kit-react",
-          label: "free download",
-          color: "info",
+          type: "internal",
+          route: "/join",
+          label: "Join",
+          color: "primary",
         }}
-        transparent
-        light
+        sticky
       />
       <MKBox
         position="absolute"
@@ -81,49 +76,61 @@ function SignInBasic() {
           backgroundRepeat: "no-repeat",
         }}
       />
-      <MKBox px={1} width="100%" height="100vh" mx="auto" position="relative" zIndex={2}>
+      <Box height={"10vh"}></Box>
+      <MKBox mt={6} px={1} width="100%" mx="auto" position="relative" zIndex={2}>
+        {/* <MKBox px={1} width="100%" height="100vh" mx="auto" position="relative" zIndex={2}> */}
         <Grid container spacing={1} justifyContent="center" alignItems="center" height="100%">
           <Grid item xs={11} sm={9} md={5} lg={4} xl={3}>
             <Card>
               <MKBox
                 variant="gradient"
-                bgColor="info"
+                bgColor="primary"
                 borderRadius="lg"
                 coloredShadow="info"
                 mx={2}
-                mt={-3}
+                mt={-2}
                 p={2}
                 mb={1}
                 textAlign="center"
               >
                 <MKTypography variant="h4" fontWeight="medium" color="white" mt={1}>
-                  Sign in
+                  Join Brothas Express
                 </MKTypography>
-                <Grid container spacing={3} justifyContent="center" sx={{ mt: 1, mb: 2 }}>
-                  <Grid item xs={2}>
-                    <MKTypography component={MuiLink} href="#" variant="body1" color="white">
-                      <FacebookIcon color="inherit" />
-                    </MKTypography>
-                  </Grid>
-                  <Grid item xs={2}>
-                    <MKTypography component={MuiLink} href="#" variant="body1" color="white">
-                      <GitHubIcon color="inherit" />
-                    </MKTypography>
-                  </Grid>
-                  <Grid item xs={2}>
-                    <MKTypography component={MuiLink} href="#" variant="body1" color="white">
-                      <GoogleIcon color="inherit" />
-                    </MKTypography>
-                  </Grid>
-                </Grid>
               </MKBox>
               <MKBox pt={4} pb={3} px={3}>
                 <MKBox component="form" role="form">
                   <MKBox mb={2}>
-                    <MKInput type="email" label="Email" fullWidth />
+                    <MKInput type="email" label="Email" fullWidth required />
                   </MKBox>
                   <MKBox mb={2}>
+                    <MKInput type="phone" label="Phone" fullWidth required />
+                  </MKBox>
+                  <MKBox mb={2}>
+                    <MKInput type="text" label="Name" fullWidth required />
+                  </MKBox>
+                  <MKBox mb={2}>
+                    <MKInput type="date" label="Birthday" fullWidth />
+                  </MKBox>
+                  <MKBox mb={2}>
+                    <MKInput type="text" label="City" fullWidth />
+                  </MKBox>
+                  {/* <MKBox mb={2}>
+                    <MKInput type="email" label="Email" fullWidth />
+                  </MKBox> */}
+                  {/* <MKBox mb={2}>
                     <MKInput type="password" label="Password" fullWidth />
+                  </MKBox> */}
+                  <MKBox display="flex" alignItems="center" ml={-1}>
+                    <Switch checked={rememberMe} onChange={handleSetRememberMe} />
+                    <MKTypography
+                      variant="button"
+                      fontWeight="regular"
+                      color="text"
+                      onClick={handleSetRememberMe}
+                      sx={{ cursor: "pointer", userSelect: "none", ml: -1 }}
+                    >
+                      &nbsp;&nbsp;Subscribe to text updates (cancel at anytime)
+                    </MKTypography>
                   </MKBox>
                   <MKBox display="flex" alignItems="center" ml={-1}>
                     <Switch checked={rememberMe} onChange={handleSetRememberMe} />
@@ -134,12 +141,12 @@ function SignInBasic() {
                       onClick={handleSetRememberMe}
                       sx={{ cursor: "pointer", userSelect: "none", ml: -1 }}
                     >
-                      &nbsp;&nbsp;Remember me
+                      &nbsp;&nbsp;Subscribe to newsletter
                     </MKTypography>
                   </MKBox>
                   <MKBox mt={4} mb={1}>
                     <MKButton variant="gradient" color="info" fullWidth>
-                      sign in
+                      Sign up
                     </MKButton>
                   </MKBox>
                   <MKBox mt={3} mb={1} textAlign="center">
@@ -163,7 +170,17 @@ function SignInBasic() {
           </Grid>
         </Grid>
       </MKBox>
-      <MKBox width="100%" position="absolute" zIndex={2} bottom="1.625rem">
+      {/* <Box height={"10vh"}></Box> */}
+
+      <MKBox
+        py={3}
+        px={1}
+        mt={6}
+        width="100%"
+        // position="absolute"
+        // zIndex={2}
+        // bottom="1.625rem"
+      >
         <SimpleFooter light />
       </MKBox>
     </>

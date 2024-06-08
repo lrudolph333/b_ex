@@ -25,12 +25,15 @@ import MKTypography from "components/MKTypography";
 import HorizontalTeamCard from "examples/Cards/TeamCards/HorizontalTeamCard";
 
 // Images
-import team1 from "assets/images/team-5.jpg";
 import team2 from "assets/images/bruce-mars.jpg";
-import team3 from "assets/images/ivana-squares.jpg";
 import team4 from "assets/images/ivana-square.jpg";
+import team3 from "assets/images/ivana-squares.jpg";
+import team1 from "assets/images/team-5.jpg";
 
 function Team() {
+  {
+    /** Maybe make this a table instead */
+  }
   return (
     <MKBox
       component="section"
@@ -43,18 +46,18 @@ function Team() {
     >
       <Container>
         <Grid container>
-          <Grid item xs={12} md={8} sx={{ mb: 6 }}>
-            <MKTypography variant="h3" color="white">
-              The Executive Team
+          <Grid item xs={12} md={12} sx={{ mb: 6 }}>
+            <MKTypography variant="h3" color="white" textAlign="center">
+              Meet our Members
             </MKTypography>
-            <MKTypography variant="body2" color="white" opacity={0.8}>
-              There&apos;s nothing I really wanted to do in life that I wasn&apos;t able to get good
-              at. That&apos;s my skill.
+            <MKTypography variant="body2" color="white" textAlign="center" opacity={0.8}>
+              {"Our community includes Black men from a variety of backgrounds."}
             </MKTypography>
           </Grid>
         </Grid>
         <Grid container spacing={3}>
-          <Grid item xs={12} lg={6}>
+          {/** TODO populate this from Firebase */}
+          <Grid item xs={12} md={6} lg={6}>
             <MKBox mb={1}>
               <HorizontalTeamCard
                 image={team1}
@@ -64,7 +67,7 @@ function Team() {
               />
             </MKBox>
           </Grid>
-          <Grid item xs={12} lg={6}>
+          <Grid item xs={12} md={6} lg={6}>
             <MKBox mb={1}>
               <HorizontalTeamCard
                 image={team2}
@@ -74,7 +77,7 @@ function Team() {
               />
             </MKBox>
           </Grid>
-          <Grid item xs={12} lg={6}>
+          <Grid item xs={12} md={6} lg={6}>
             <MKBox mb={{ xs: 1, lg: 0 }}>
               <HorizontalTeamCard
                 image={team3}
@@ -84,7 +87,7 @@ function Team() {
               />
             </MKBox>
           </Grid>
-          <Grid item xs={12} lg={6}>
+          <Grid item xs={12} md={6} lg={6}>
             <MKBox mb={{ xs: 1, lg: 0 }}>
               <HorizontalTeamCard
                 image={team4}

@@ -14,14 +14,13 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
+import { Link } from "@mui/material";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import Icon from "@mui/material/Icon";
 
 // Material Kit 2 React components
-import MKBox from "components/MKBox";
 import MKAvatar from "components/MKAvatar";
-import MKButton from "components/MKButton";
+import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
 // Images
@@ -29,74 +28,79 @@ import profilePicture from "assets/images/bruce-mars.jpg";
 
 function Profile() {
   return (
-    <MKBox component="section" py={{ xs: 6, sm: 12 }}>
+    <MKBox component="section" py={6}>
       <Container>
+        <Grid container>
+          <Grid item xs={12} md={12} sx={{ mb: 6 }}>
+            <MKTypography variant="h3" color="white" textAlign="center">
+              {"Meet the Founder"}
+            </MKTypography>
+          </Grid>
+        </Grid>
         <Grid container item xs={12} justifyContent="center" mx="auto">
-          <MKBox mt={{ xs: -16, md: -20 }} textAlign="center">
+          <MKBox textAlign="center" md={6} mb={-2}>
             <MKAvatar src={profilePicture} alt="Burce Mars" size="xxl" shadow="xl" />
           </MKBox>
-          <Grid container justifyContent="center" py={6}>
-            <Grid item xs={12} md={7} mx={{ xs: "auto", sm: 6, md: 1 }}>
-              <MKBox display="flex" justifyContent="space-between" alignItems="center" mb={1}>
-                <MKTypography variant="h3">Michael Roven</MKTypography>
-                <MKButton variant="outlined" color="info" size="small">
-                  Follow
-                </MKButton>
-              </MKBox>
-              <Grid container spacing={3} mb={3}>
-                <Grid item>
-                  <MKTypography component="span" variant="body2" fontWeight="bold">
-                    323&nbsp;
-                  </MKTypography>
-                  <MKTypography component="span" variant="body2" color="text">
-                    Posts
-                  </MKTypography>
-                </Grid>
-                <Grid item>
-                  <MKTypography component="span" variant="body2" fontWeight="bold">
-                    3.5k&nbsp;
-                  </MKTypography>
-                  <MKTypography component="span" variant="body2" color="text">
-                    Followers
-                  </MKTypography>
-                </Grid>
-                <Grid item>
-                  <MKTypography component="span" variant="body2" fontWeight="bold">
-                    260&nbsp;
-                  </MKTypography>
-                  <MKTypography component="span" variant="body2" color="text">
-                    Following
-                  </MKTypography>
-                </Grid>
-              </Grid>
-              <MKTypography variant="body1" fontWeight="light" color="text">
-                Decisions: If you can&apos;t decide, the answer is no. If two equally difficult
-                paths, choose the one more painful in the short term (pain avoidance is creating an
-                illusion of equality). Choose the path that leaves you more equanimous. <br />
-                <MKTypography
-                  component="a"
-                  href="#"
-                  variant="body1"
-                  fontWeight="light"
-                  color="info"
-                  mt={3}
-                  sx={{
-                    width: "max-content",
-                    display: "flex",
-                    alignItems: "center",
-
-                    "& .material-icons-round": {
-                      transform: `translateX(3px)`,
-                      transition: "transform 0.2s cubic-bezier(0.34, 1.61, 0.7, 1.3)",
-                    },
-
-                    "&:hover .material-icons-round, &:focus .material-icons-round": {
-                      transform: `translateX(6px)`,
-                    },
-                  }}
-                >
-                  More about me <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
+          <Grid container justifyContent="center" py={3}>
+            <Grid item xs={12} md={6} mx={1}>
+              <MKBox
+                display="flex"
+                flexDirection="column"
+                justifyContent="center"
+                alignItems="center"
+                mb={1}
+              >
+                <MKTypography variant="h3" textAlign="center">
+                  {"Trey Rudolph"}
                 </MKTypography>
+              </MKBox>
+              {/* <Container container display="flex" flex-direction="row" justifyContent="flex-start"> */}
+              <MKBox display="flex" justifyContent="center" alignItems="center">
+                <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                  <MKBox
+                    component="i"
+                    color="#55acee"
+                    fontSize="1.125rem"
+                    className="fab fa-twitter"
+                    sx={{ margin: "0 10px" }}
+                  />
+                </Link>
+                <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                  <MKBox
+                    component="i"
+                    color="#0077b5"
+                    fontSize="1.125rem"
+                    className="fab fa-linkedin"
+                    sx={{ margin: "0 10px" }}
+                  />
+                </Link>
+                <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                  <MKBox
+                    component="i"
+                    color="#E1306C"
+                    fontSize="1.125rem"
+                    className="fab fa-instagram"
+                    sx={{ margin: "0 10px" }}
+                  />
+                </Link>
+                <Link href="https://treyr.me" target="_blank" rel="noopener noreferrer">
+                  <MKBox
+                    component="i"
+                    color="#000"
+                    fontSize="1.125rem"
+                    className="fas fa-globe"
+                    sx={{ margin: "0 10px" }}
+                  />
+                </Link>
+              </MKBox>
+              <MKTypography
+                mt={2}
+                variant="body1"
+                fontWeight="light"
+                color="text"
+                textAlign="center"
+              >
+                {"What would you do if you weren't afraid?"} <br />
               </MKTypography>
             </Grid>
           </Grid>
