@@ -1,17 +1,10 @@
 {
-  "name": "material-kit-2-react",
-  "version": "2.1.0",
+  "name": "Brothas Express",
+  "version": "1.0.0",
   "private": true,
-  "author": "Creative Tim",
+  "author": "Trey",
   "license": "See license in https://www.creative-tim.com/license",
-  "description": "React version of Material Kit 2 by Creative Tim",
-  "bugs": {
-    "url": "https://github.com/creativetimofficial/ct-material-kit-react/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/creativetimofficial/ct-material-kit-react.git"
-  },
+  "description": "Brothas Express community page",
   "dependencies": {
     "@emotion/cache": "11.10.7",
     "@emotion/react": "11.10.6",

@@ -18,8 +18,8 @@ import PropTypes from "prop-types";
 
 // @mui material components
 import Container from "@mui/material/Container";
-import Link from "@mui/material/Link";
 import Icon from "@mui/material/Icon";
+import Link from "@mui/material/Link";
 
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
@@ -106,12 +106,11 @@ function SimpleFooter({ company, links, light }) {
 
 // Setting default values for the props of SimpleFooter
 SimpleFooter.defaultProps = {
-  company: { href: "https://www.creative-tim.com/", name: "Creative Tim" },
+  company: { href: "https://treyr.me/", name: "Trey" },
   links: [
-    { href: "https://www.creative-tim.com/", name: "Creative Tim" },
-    { href: "https://www.creative-tim.com/presentation", name: "About Us" },
-    { href: "https://www.creative-tim.com/blog", name: "Blog" },
-    { href: "https://www.creative-tim.com/license", name: "License" },
+    { href: "https://buymeacoffee.com/treyruiii", name: "Buy Me A Coffee" },
+    { href: "https://www.creative-tim.com/blog", name: "IG" }, //TODO add a field for icon
+    { href: "https://www.creative-tim.com/license", name: "Discord" },
   ],
   light: false,
 };
