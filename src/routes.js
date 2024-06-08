@@ -44,7 +44,7 @@ import Icon from "@mui/material/Icon";
 // Pages
 import SignIn from "layouts/pages/authentication/sign-in";
 import AboutUs from "layouts/pages/landing-pages/about-us";
-//View content
+//View content (link to notion)
 //FAQ
 
 // Sections

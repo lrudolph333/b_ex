@@ -30,16 +30,16 @@ function FeaturesOne() {
         <Grid container alignItems="center">
           <Grid item xs={12} lg={5}>
             <MKTypography variant="h3" my={1}>
-              Read More About Us
+              How does Brothas Express work?
             </MKTypography>
             <MKTypography variant="body2" color="text" mb={2}>
-              Pain is what we go through as we become older. We get insulted by others, lose trust
-              for those others. We get back stabbed by friends. It becomes harder for us to give
-              others a hand.
+              We are a community of black men who share one common goal; to redefine thriving,
+              healthy masculinity for the benefit of ourselves and the relationships we have with
+              others.
             </MKTypography>
             <MKTypography
               component="a"
-              href="#"
+              href="https://www.instagram.com/brothas_express/"
               variant="body2"
               color="info"
               fontWeight="regular"
@@ -59,7 +59,7 @@ function FeaturesOne() {
                 },
               }}
             >
-              More about us
+              Check out our pilot program
               <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
             </MKTypography>
           </Grid>
@@ -81,9 +81,12 @@ function FeaturesOne() {
                   <Icon fontSize="small">mediation</Icon>
                 </MKBox>
                 <MKTypography variant="body2" color="text" pl={2}>
-                  It becomes harder for us to give others a hand.
-                  <br />
-                  We get our heart broken by people we love.
+                  Weekly virtual discussion sessions on specific topics
+                  {/* with
+                  curated content from thought-leaders in the space. */}
+                  {/* <br />
+                  These give us a chance to express ourselves vulnerably, and learn from each other
+                  together. */}
                 </MKTypography>
               </MKBox>
               <MKBox display="flex" alignItems="center" p={2}>
@@ -102,9 +105,7 @@ function FeaturesOne() {
                   <Icon fontSize="small">settings_overscan</Icon>
                 </MKBox>
                 <MKTypography variant="body2" color="text" pl={2}>
-                  As we live, our hearts turn colder.
-                  <br />
-                  Cause pain is what we go through as we become older.
+                  An exclusive online space to share thoughts ask advice of each other.
                 </MKTypography>
               </MKBox>
               <MKBox display="flex" alignItems="center" p={2}>
@@ -123,9 +124,8 @@ function FeaturesOne() {
                   <Icon fontSize="small">token</Icon>
                 </MKBox>
                 <MKTypography variant="body2" color="text" pl={2}>
-                  When we lose family over time.
-                  <br />
-                  What else could rust the heart more over time? Blackgold.
+                  A growing library of digestable, curated content from thought-leaders on
+                  masculinity
                 </MKTypography>
               </MKBox>
             </Stack>

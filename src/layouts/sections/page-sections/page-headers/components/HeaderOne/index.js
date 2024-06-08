@@ -14,9 +14,7 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
-import Stack from "@mui/material/Stack";
+import { Box, Container, Grid, Stack, useMediaQuery } from "@mui/material";
 
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
@@ -25,8 +23,11 @@ import MKTypography from "components/MKTypography";
 
 // Images
 import bgImage from "assets/images/landing.png";
+import ReactPlayer from "react-player";
 
 function HeaderOne() {
+  const isMdDown = useMediaQuery((theme) => theme.breakpoints.down("md"));
+
   return (
     <>
       <MKBox component="header" position="relative" height="100%">
@@ -45,38 +46,68 @@ function HeaderOne() {
           }}
         >
           <Container>
-            <Grid
-              container
-              item
-              xs={12}
-              md={7}
-              lg={6}
-              flexDirection="column"
-              justifyContent="center"
-            >
-              <MKTypography
-                variant="h1"
-                color="white"
-                mb={3}
-                sx={({ breakpoints, typography: { size } }) => ({
-                  [breakpoints.down("md")]: {
-                    fontSize: size["3xl"],
-                  },
-                })}
+            <Box height={"10vh"}></Box>
+            <Grid mt={2} mb={2} container flexDirection="row" justifyContent="center">
+              <Grid
+                container
+                item
+                xs={12}
+                md={6}
+                lg={6}
+                flexDirection="column"
+                justifyContent="center"
+                alignItems={isMdDown ? "center" : "flex-start"}
               >
-                Brothas Express
-              </MKTypography>
-              <MKTypography variant="body1" color="white" opacity={0.8} pr={6} mr={6}>
-                A reflective conversation space to redefine thriving manhood for Black men.
-              </MKTypography>
-              <Stack direction="row" spacing={1} mt={3}>
-                <MKButton color="white">Join</MKButton>
-                <MKButton variant="text" color="white">
-                  Learn more
-                </MKButton>
-              </Stack>
-              {/** TODO add youtube intro clip */}
+                <MKTypography
+                  variant="h1"
+                  color="white"
+                  mb={3}
+                  sx={({ breakpoints, typography: { size } }) => ({
+                    [breakpoints.down("md")]: {
+                      fontSize: size["3xl"],
+                      textAlign: "center",
+                    },
+                  })}
+                >
+                  Brothas Express
+                </MKTypography>
+                <MKTypography
+                  variant="body1"
+                  color="white"
+                  opacity={0.8}
+                  // pr={6}
+                  // mr={6}
+                  sx={{
+                    textAlign: isMdDown ? "center" : "left",
+                  }}
+                >
+                  A reflective conversation space to redefine thriving manhood for Black men.
+                </MKTypography>
+                <Stack
+                  direction={isMdDown ? "column" : "row"}
+                  spacing={1}
+                  mt={3}
+                  alignItems="center"
+                >
+                  <MKButton color="white">Join</MKButton>
+                  <MKButton variant="text" color="white">
+                    Learn more
+                  </MKButton>
+                </Stack>
+              </Grid>
+              <Grid
+                item
+                xs={12}
+                md={6}
+                lg={6}
+                width={"100%"}
+                display="flex"
+                justifyContent={"center"}
+              >
+                <ReactPlayer width="50%" url="https://www.youtube.com/watch?v=LXb3EKWsInQ" />
+              </Grid>
             </Grid>
+            <Box height={"10vh"}></Box>
           </Container>
         </MKBox>
       </MKBox>

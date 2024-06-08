@@ -22,7 +22,7 @@ import MKBox from "components/MKBox";
 // Material Kit 2 React examples
 import SimpleFooter from "examples/Footers/SimpleFooter";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
-
+import FeaturesOne from "layouts/sections/page-sections/featuers/components/FeaturesOne";
 // Home page sections
 
 // Home page components
@@ -60,7 +60,14 @@ function Home() {
             backdropFilter: "saturate(200%) blur(30px)",
             boxShadow: ({ boxShadows: { xxl } }) => xxl,
           }}
-        ></Card>
+        >
+          {/** Introduction */}
+          <FeaturesOne></FeaturesOne>
+          {/** Members */}
+          {/** Meet the Founder */}
+          {/** FAQs */}
+          {/** How to get involved */}
+        </Card>
         <MKBox pt={6} px={1} mt={6} mb={5}>
           <SimpleFooter content={footerRoutes} />
         </MKBox>
