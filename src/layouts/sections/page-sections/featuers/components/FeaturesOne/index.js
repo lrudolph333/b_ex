@@ -14,6 +14,7 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
+import { Box } from "@mui/material";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
@@ -40,6 +41,7 @@ function FeaturesOne() {
             <MKTypography
               component="a"
               href="https://www.instagram.com/brothas_express/"
+              target="_blank"
               variant="body2"
               color="info"
               fontWeight="regular"
@@ -59,75 +61,76 @@ function FeaturesOne() {
                 },
               }}
             >
-              Check out our pilot program
-              <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
+              View our season 1<Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
             </MKTypography>
           </Grid>
           <Grid item xs={12} lg={6} sx={{ ml: { xs: -2, lg: "auto" }, mt: { xs: 6, lg: 0 } }}>
             <Stack>
-              <MKBox display="flex" alignItems="center" p={2}>
-                <MKBox
-                  width="3rem"
-                  height="3rem"
-                  variant="gradient"
-                  bgColor="info"
-                  color="white"
-                  coloredShadow="info"
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  borderRadius="xl"
-                >
-                  <Icon fontSize="small">mediation</Icon>
-                </MKBox>
-                <MKTypography variant="body2" color="text" pl={2}>
-                  Weekly virtual discussion sessions on specific topics
-                  {/* with
-                  curated content from thought-leaders in the space. */}
-                  {/* <br />
-                  These give us a chance to express ourselves vulnerably, and learn from each other
-                  together. */}
-                </MKTypography>
-              </MKBox>
-              <MKBox display="flex" alignItems="center" p={2}>
-                <MKBox
-                  width="3rem"
-                  height="3rem"
-                  variant="gradient"
-                  bgColor="info"
-                  color="white"
-                  coloredShadow="info"
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  borderRadius="xl"
-                >
-                  <Icon fontSize="small">settings_overscan</Icon>
-                </MKBox>
-                <MKTypography variant="body2" color="text" pl={2}>
-                  An exclusive online space to share thoughts ask advice of each other.
-                </MKTypography>
-              </MKBox>
-              <MKBox display="flex" alignItems="center" p={2}>
-                <MKBox
-                  width="3rem"
-                  height="3rem"
-                  variant="gradient"
-                  bgColor="info"
-                  color="white"
-                  coloredShadow="info"
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  borderRadius="xl"
-                >
-                  <Icon fontSize="small">token</Icon>
-                </MKBox>
-                <MKTypography variant="body2" color="text" pl={2}>
-                  A growing library of digestable, curated content from thought-leaders on
-                  masculinity
-                </MKTypography>
-              </MKBox>
+              <Grid container alignItems="flex-start" p={2}>
+                <Grid item>
+                  <Box
+                    width="3rem"
+                    height="3rem"
+                    bgcolor="info.main"
+                    color="white"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
+                    borderRadius="8px"
+                  >
+                    <Icon fontSize="small">mediation</Icon>
+                  </Box>
+                </Grid>
+                <Grid item xs>
+                  <MKTypography variant="body2" color="textSecondary" pl={2}>
+                    Weekly virtual discussion sessions on specific topics
+                  </MKTypography>
+                </Grid>
+              </Grid>
+              <Grid container alignItems="flex-start" p={2}>
+                <Grid item>
+                  <Box
+                    width="3rem"
+                    height="3rem"
+                    bgcolor="info.main"
+                    color="white"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
+                    borderRadius="8px"
+                  >
+                    <Icon fontSize="small">token</Icon>
+                  </Box>
+                </Grid>
+                <Grid item xs>
+                  <MKTypography variant="body2" color="textSecondary" pl={2}>
+                    {
+                      " A growing library of digestable, curated content from thought-leaders on masculinity"
+                    }
+                  </MKTypography>
+                </Grid>
+              </Grid>
+              <Grid container alignItems="flex-start" p={2}>
+                <Grid item>
+                  <Box
+                    width="3rem"
+                    height="3rem"
+                    bgcolor="info.main"
+                    color="white"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
+                    borderRadius="8px"
+                  >
+                    <Icon fontSize="small">settings_overscan</Icon>
+                  </Box>
+                </Grid>
+                <Grid item xs>
+                  <MKTypography variant="body2" color="textSecondary" pl={2}>
+                    {"An exclusive online space to share thoughts ask advice of each other."}
+                  </MKTypography>
+                </Grid>
+              </Grid>
             </Stack>
           </Grid>
         </Grid>

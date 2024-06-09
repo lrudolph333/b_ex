@@ -20,6 +20,7 @@ import Card from "@mui/material/Card";
 import MKBox from "components/MKBox";
 
 // Material Kit 2 React examples
+import Divider from "@mui/material/Divider";
 import SimpleFooter from "examples/Footers/SimpleFooter";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import FeaturesOne from "layouts/sections/page-sections/featuers/components/FeaturesOne";
@@ -34,6 +35,7 @@ import routes from "routes";
 import HeaderOne from "layouts/sections/page-sections/page-headers/components/HeaderOne";
 import Profile from "pages/LandingPages/Author/sections/Profile";
 import SimpleTable from "./components/SimpleTable";
+import Counters from "./sections/Counters";
 // Images
 
 function Home() {
@@ -45,6 +47,7 @@ function Home() {
           type: "internal",
           route: "/join",
           label: "Join",
+
           color: "primary",
         }}
         sticky
@@ -65,15 +68,24 @@ function Home() {
         >
           {/** Introduction */}
           <FeaturesOne></FeaturesOne>
+          <Divider variant="middle" />
+
+          {/** How to get involved */}
+          <Counters></Counters>
+          <Divider variant="middle" />
+
           {/** Meet the Founder */}
           <Profile></Profile>
+          <Divider variant="middle" />
+
           {/** Members */}
           {/* <Team></Team> */}
           <SimpleTable></SimpleTable>
+          <Divider variant="middle" />
 
           {/** FAQs */}
           <FAQSection></FAQSection>
-          {/** How to get involved */}
+          <Divider variant="middle" />
         </Card>
         <MKBox pt={6} px={1} mt={6} mb={5}>
           <SimpleFooter content={footerRoutes} />

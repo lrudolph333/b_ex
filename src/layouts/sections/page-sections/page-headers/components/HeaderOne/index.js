@@ -89,10 +89,12 @@ function HeaderOne() {
                   mt={3}
                   alignItems="center"
                 >
-                  <MKButton color="white">Join</MKButton>
-                  <MKButton variant="text" color="white">
-                    Learn more
+                  <MKButton color="white" href="/join">
+                    Join
                   </MKButton>
+                  {/* <MKButton variant="text" color="white">
+                    Learn more
+                  </MKButton> */}
                 </Stack>
               </Grid>
               <Grid

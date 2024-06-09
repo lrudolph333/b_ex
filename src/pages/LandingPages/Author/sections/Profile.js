@@ -24,15 +24,15 @@ import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
 // Images
-import profilePicture from "assets/images/bruce-mars.jpg";
+import profilePicture from "assets/images/grad_pic.jpg";
 
 function Profile() {
   return (
-    <MKBox component="section" py={6}>
+    <MKBox component="section" py={4}>
       <Container>
         <Grid container>
           <Grid item xs={12} md={12} sx={{ mb: 6 }}>
-            <MKTypography variant="h3" color="white" textAlign="center">
+            <MKTypography variant="h3" color="primary" textAlign="center">
               {"Meet the Founder"}
             </MKTypography>
           </Grid>
@@ -56,7 +56,7 @@ function Profile() {
               </MKBox>
               {/* <Container container display="flex" flex-direction="row" justifyContent="flex-start"> */}
               <MKBox display="flex" justifyContent="center" alignItems="center">
-                <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                <Link href="https://twitter.com/T_Goody3" target="_blank" rel="noopener noreferrer">
                   <MKBox
                     component="i"
                     color="#55acee"
@@ -65,7 +65,11 @@ function Profile() {
                     sx={{ margin: "0 10px" }}
                   />
                 </Link>
-                <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <Link
+                  href="https://www.linkedin.com/in/trey-r-link/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <MKBox
                     component="i"
                     color="#0077b5"
@@ -74,7 +78,11 @@ function Profile() {
                     sx={{ margin: "0 10px" }}
                   />
                 </Link>
-                <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <Link
+                  href="https://instagram.com/icetrey12"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <MKBox
                     component="i"
                     color="#E1306C"

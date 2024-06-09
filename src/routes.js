@@ -55,6 +55,11 @@ const routes = [
     href: "https://jade-day-f2d.notion.site/Brothas-Express-Library-5bf8e9d563014258bf168224f99bb553",
   },
   {
+    name: "Newsletter",
+    icon: <Icon>mail</Icon>,
+    href: "https://brothas-express.beehiiv.com/",
+  },
+  {
     // icon: <Icon>dashboard</Icon>,
     route: "/join",
     component: <SignIn />,

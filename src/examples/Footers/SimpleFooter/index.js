@@ -108,7 +108,11 @@ function SimpleFooter({ company, links, light }) {
                 sx={{ margin: "0 10px" }}
               />
             </Link>
-            <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://instagram.com/brothas_express"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <MKBox
                 component="i"
                 color="#E1306C"
@@ -117,7 +121,16 @@ function SimpleFooter({ company, links, light }) {
                 sx={{ margin: "0 10px" }}
               />
             </Link>
-            <Link href="https://treyr.me" target="_blank" rel="noopener noreferrer">
+            <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <MKBox
+                component="i"
+                color="#E1306C"
+                fontSize="1.125rem"
+                className="fab fa-tiktok"
+                sx={{ margin: "0 10px" }}
+              />
+            </Link>
+            {/* <Link href="https://treyr.me" target="_blank" rel="noopener noreferrer">
               <MKBox
                 component="i"
                 color="#000"
@@ -125,7 +138,7 @@ function SimpleFooter({ company, links, light }) {
                 className="fas fa-globe"
                 sx={{ margin: "0 10px" }}
               />
-            </Link>
+            </Link> */}
           </MKBox>
         </MKBox>
       </MKBox>

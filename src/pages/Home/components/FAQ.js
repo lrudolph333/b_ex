@@ -31,10 +31,10 @@ const faqs = [
 const FAQSection = () => {
   return (
     <Container maxWidth="md">
-      <Box my={6}>
+      <Box py={4}>
         <Grid container>
           <Grid item xs={12} md={12} sx={{ mb: 6 }}>
-            <MKTypography variant="h3" color="white" textAlign="center">
+            <MKTypography variant="h3" color="primary" textAlign="center">
               Frequently Asked Questions
             </MKTypography>
             <MKTypography variant="body2" color="white" textAlign="center" opacity={0.8}>

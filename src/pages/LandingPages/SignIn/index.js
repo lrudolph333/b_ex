@@ -16,7 +16,6 @@ Coded by www.creative-tim.com
 import { useState } from "react";
 
 // react-router-dom components
-import { Link } from "react-router-dom";
 
 // @mui material components
 import { Box } from "@mui/material";
@@ -97,6 +96,7 @@ function SignInBasic() {
                   Join Brothas Express
                 </MKTypography>
               </MKBox>
+              {/** TODO make sure no email joins twice */}
               <MKBox pt={4} pb={3} px={3}>
                 <MKBox component="form" role="form">
                   <MKBox mb={2}>
@@ -108,11 +108,20 @@ function SignInBasic() {
                   <MKBox mb={2}>
                     <MKInput type="text" label="Name" fullWidth required />
                   </MKBox>
-                  <MKBox mb={2}>
-                    <MKInput type="date" label="Birthday" fullWidth />
+
+                  <MKBox mb={0}>
+                    <MKInput type="text" label="City" fullWidth />
                   </MKBox>
                   <MKBox mb={2}>
-                    <MKInput type="text" label="City" fullWidth />
+                    <MKBox mb={-2} ml={1.7} zIndex={2} fontWeight={"bold"}>
+                      <MKTypography variant="overline">Birthday</MKTypography>
+                    </MKBox>
+                    <MKInput type="date" fullWidth />
+                    <MKBox>
+                      <MKTypography variant="overline">
+                        used to show your age in community spaces
+                      </MKTypography>
+                    </MKBox>
                   </MKBox>
                   {/* <MKBox mb={2}>
                     <MKInput type="email" label="Email" fullWidth />
@@ -145,11 +154,11 @@ function SignInBasic() {
                     </MKTypography>
                   </MKBox>
                   <MKBox mt={4} mb={1}>
-                    <MKButton variant="gradient" color="info" fullWidth>
-                      Sign up
+                    <MKButton variant="gradient" color="primary" fullWidth>
+                      Join
                     </MKButton>
                   </MKBox>
-                  <MKBox mt={3} mb={1} textAlign="center">
+                  {/* <MKBox mt={3} mb={1} textAlign="center">
                     <MKTypography variant="button" color="text">
                       Don&apos;t have an account?{" "}
                       <MKTypography
@@ -163,7 +172,7 @@ function SignInBasic() {
                         Sign up
                       </MKTypography>
                     </MKTypography>
-                  </MKBox>
+                  </MKBox> */}
                 </MKBox>
               </MKBox>
             </Card>
