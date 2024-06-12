@@ -53,7 +53,7 @@ const routes = [
   {
     name: "Library",
     icon: <Icon>article</Icon>,
-    href: "https://jade-day-f2d.notion.site/Brothas-Express-Library-5bf8e9d563014258bf168224f99bb553",
+    href: "https://brothas-express.notion.site/Brothas-Express-Library-5bf8e9d563014258bf168224f99bb553",
   },
   {
     name: "Newsletter",
