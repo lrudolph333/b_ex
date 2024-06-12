@@ -83,7 +83,7 @@ function HeaderOne(user) {
                 >
                   A reflective conversation space to redefine thriving manhood for Black men.
                 </MKTypography>
-                {!user && (
+                {!user ? (
                   <Stack
                     direction={isMdDown ? "column" : "row"}
                     spacing={1}
@@ -93,9 +93,19 @@ function HeaderOne(user) {
                     <MKButton color="white" href="/join">
                       Join
                     </MKButton>
-                    {/* <MKButton variant="text" color="white">
-                    Learn more
-                  </MKButton> */}
+                  </Stack>
+                ) : (
+                  <Stack
+                    direction={isMdDown ? "column" : "row"}
+                    spacing={1}
+                    mt={3}
+                    alignItems="center"
+                  >
+                    {/**TODO Make this button really pop, animate it */}
+
+                    <MKButton color="primary" target="_blank" href="https://discord.gg/R5Q3XEzSX9">
+                      Enter Brothas Express Nexus
+                    </MKButton>
                   </Stack>
                 )}
               </Grid>

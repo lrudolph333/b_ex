@@ -99,7 +99,7 @@ const FAQSection = () => {
           </Grid>
         </Grid>
         {faqs.map((faq, index) => (
-          <Accordion key={index}>
+          <Accordion sx={{ padding: "3px", margin: "3px" }} key={index}>
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
               <Typography variant="h6">{faq.question}</Typography>
             </AccordionSummary>
