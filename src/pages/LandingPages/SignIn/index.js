@@ -6,8 +6,11 @@ import MKInput from "components/MKInput";
 import MKTypography from "components/MKTypography";
 import SimpleFooter from "examples/Footers/SimpleFooter";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
-import { useState } from "react";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import routes from "routes";
+
 import { auth, sendSignInLinkToEmail } from "../../../firebaseConfig"; // adjust the path as necessary
 
 function SignInBasic() {
@@ -19,7 +22,24 @@ function SignInBasic() {
   const [birthday, setBirthday] = useState("");
   const [subscribeEmail, setSubscribeEmail] = useState(false);
   const [subscribeText, setSubscribeText] = useState(false);
+  const [user, setUser] = useState(null);
+  const navigate = useNavigate();
 
+  useEffect(() => {
+    const auth = getAuth();
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // console.log("user: " + user);
+        navigate("/home"); // Navigate to /home if user is authenticated
+        setUser(user);
+      } else {
+        setUser(null);
+      }
+    });
+
+    // Cleanup subscription on unmount
+    return () => unsubscribe();
+  }, []);
   // const navigate = useNavigate();
 
   const handleSetSubscribeText = () => setSubscribeText(!subscribeText);
@@ -27,7 +47,10 @@ function SignInBasic() {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-
+    if (reason.length < 50) {
+      alert("Please give us at least 50 characters on why you want to join.");
+      return;
+    }
     // const emailQuery = query(collection(firestore, "users"), where("email", "==", email));
     // const querySnapshot = await getDocs(emailQuery);
 
@@ -53,7 +76,7 @@ function SignInBasic() {
     try {
       await sendSignInLinkToEmail(auth, email, actionCodeSettings);
       window.localStorage.setItem("emailForSignIn", email);
-      alert("Verification email sent! Check your inbox.");
+      alert("Verification email sent! Check your inbox (spam).");
     } catch (error) {
       console.error("Error sending email: ", error);
       alert("Error sending verification email. Please try again.");
@@ -64,12 +87,17 @@ function SignInBasic() {
     <>
       <DefaultNavbar
         routes={routes}
-        action={{
-          type: "internal",
-          route: "/join",
-          label: "Join",
-          color: "primary",
-        }}
+        action={
+          user
+            ? //TODO implement logout functionality
+              null
+            : {
+                type: "internal",
+                route: "/join",
+                label: "Join",
+                color: "primary",
+              }
+        }
         sticky
       />
       <MKBox
@@ -153,6 +181,19 @@ function SignInBasic() {
                       value={reason}
                       onChange={(e) => setReason(e.target.value)}
                     />
+                    <MKBox display="flex" justifyContent="end">
+                      <MKTypography
+                        variant="caption"
+                        sx={{
+                          // position: "absolute",
+                          bottom: 0,
+                          right: 0,
+                          padding: "0.5rem",
+                        }}
+                      >
+                        {reason.length + "/50"}
+                      </MKTypography>
+                    </MKBox>
                   </MKBox>
                   <MKBox mb={0}>
                     <MKInput

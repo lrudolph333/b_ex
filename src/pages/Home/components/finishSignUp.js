@@ -46,6 +46,7 @@ const FinishSignUp = () => {
             birthday: birthday ? new Date(birthday) : null, // Ensure birthday is of type Date or null
             subscribeEmail: subscribeEmail,
             subscribeText: subscribeText,
+            createdAt: Date.now(),
           });
         } catch (error) {
           console.error("error adding doc: " + error);

@@ -26,6 +26,62 @@ const faqs = [
     answer:
       "Members gain access to exclusive content, community events, and a supportive network of like-minded individuals.",
   },
+  {
+    question: "What inspired the creation of Brothas Express, and why is it important? ",
+    answer: "no and yes",
+  },
+  {
+    question:
+      " What does a typical Brothas Express discussion look like, and what can I expect if I join?",
+    answer: "no and yes",
+  },
+  {
+    question:
+      "How does Brothas Express ensure a safe and respectful discussion space for all participants?",
+    answer: "no and yes",
+  },
+  {
+    question:
+      "Are there any requirements or expectations for individuals who wish to participate in Brothas Express discussions?",
+    answer: "no and yes",
+  },
+  {
+    question:
+      "Can someone outside of the Black community benefit from or contribute to Brothas Express?",
+    answer: "no and yes",
+  },
+  {
+    question: "Is this only for Black men? Can women/non-binary join?",
+    answer: "no and yes",
+  },
+  {
+    question: "I'm too busy to ever join the weekly discussion space. What should I do?",
+    answer: "no and yes",
+  },
+  {
+    question:
+      "Does Brothas Express collaborate with other organizations or communities, and if so, how?",
+    answer: "no and yes",
+  },
+  {
+    question:
+      "Are there any costs associated with participating in Brothas Express discussions or events?",
+    answer: "no and yes",
+  },
+  {
+    question:
+      "How can I contribute to or support the mission of Brothas Express if I cannot participate in discussions?",
+    answer: "no and yes",
+  },
+  {
+    question:
+      "How does Brothas Express handle confidentiality and privacy concerns within the discussion group?",
+    answer: "no and yes",
+  },
+  {
+    question: "I'm  kind of ignorant on many things. Is this discussion space for me?",
+    answer: "no and yes",
+  },
 ];
 
 const FAQSection = () => {

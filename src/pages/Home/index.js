@@ -46,7 +46,7 @@ function Home() {
     const auth = getAuth();
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        console.log("user: " + user);
+        // console.log("user: " + user);
         setUser(user);
       } else {
         setUser(null);
@@ -76,7 +76,7 @@ function Home() {
       />
 
       <MKBox display="flex" flexDirection="column" bgColor="white">
-        <HeaderOne></HeaderOne>
+        <HeaderOne user={user}></HeaderOne>
         <Card
           sx={{
             p: 2,

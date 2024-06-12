@@ -99,7 +99,7 @@ function SimpleFooter({ company, links, light }) {
         >
           {renderLinks()}
           <MKBox display="flex" justifyContent="center" alignItems="center">
-            <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            {/* <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer">
               <MKBox
                 component="i"
                 color="#55acee"
@@ -107,7 +107,7 @@ function SimpleFooter({ company, links, light }) {
                 className="fab fa-discord"
                 sx={{ margin: "0 10px" }}
               />
-            </Link>
+            </Link> */}
             <Link
               href="https://instagram.com/brothas_express"
               target="_blank"
@@ -121,7 +121,11 @@ function SimpleFooter({ company, links, light }) {
                 sx={{ margin: "0 10px" }}
               />
             </Link>
-            <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://www.tiktok.com/@brothas.express?lang=en"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <MKBox
                 component="i"
                 color="#E1306C"

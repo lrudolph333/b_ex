@@ -25,7 +25,7 @@ import MKTypography from "components/MKTypography";
 import bgImage from "assets/images/landing.png";
 import ReactPlayer from "react-player";
 
-function HeaderOne() {
+function HeaderOne(user) {
   const isMdDown = useMediaQuery((theme) => theme.breakpoints.down("md"));
 
   return (
@@ -83,19 +83,21 @@ function HeaderOne() {
                 >
                   A reflective conversation space to redefine thriving manhood for Black men.
                 </MKTypography>
-                <Stack
-                  direction={isMdDown ? "column" : "row"}
-                  spacing={1}
-                  mt={3}
-                  alignItems="center"
-                >
-                  <MKButton color="white" href="/join">
-                    Join
-                  </MKButton>
-                  {/* <MKButton variant="text" color="white">
+                {!user && (
+                  <Stack
+                    direction={isMdDown ? "column" : "row"}
+                    spacing={1}
+                    mt={3}
+                    alignItems="center"
+                  >
+                    <MKButton color="white" href="/join">
+                      Join
+                    </MKButton>
+                    {/* <MKButton variant="text" color="white">
                     Learn more
                   </MKButton> */}
-                </Stack>
+                  </Stack>
+                )}
               </Grid>
               <Grid
                 item
