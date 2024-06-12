@@ -1,4 +1,4 @@
-import { Box, Card, CircularProgress, Grid, Switch } from "@mui/material";
+import { Box, Card, Grid, Switch } from "@mui/material";
 import bgImage from "assets/images/bg-sign-in-basic.jpeg";
 import MKBox from "components/MKBox";
 import MKButton from "components/MKButton";
@@ -6,22 +6,9 @@ import MKInput from "components/MKInput";
 import MKTypography from "components/MKTypography";
 import SimpleFooter from "examples/Footers/SimpleFooter";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import routes from "routes";
-import {
-  auth,
-  collection,
-  doc,
-  firestore,
-  getDocs,
-  isSignInWithEmailLink,
-  query,
-  sendSignInLinkToEmail,
-  setDoc,
-  signInWithEmailLink,
-  where,
-} from "../../../firebaseConfig"; // adjust the path as necessary
+import { auth, sendSignInLinkToEmail } from "../../../firebaseConfig"; // adjust the path as necessary
 
 function SignInBasic() {
   const [email, setEmail] = useState("");
@@ -32,95 +19,46 @@ function SignInBasic() {
   const [birthday, setBirthday] = useState("");
   const [subscribeEmail, setSubscribeEmail] = useState(false);
   const [subscribeText, setSubscribeText] = useState(false);
-  const [isSendingLink, setIsSendingLink] = useState(false);
-  const navigate = useNavigate();
+
+  // const navigate = useNavigate();
 
   const handleSetSubscribeText = () => setSubscribeText(!subscribeText);
   const handleSetSubscribeEmail = () => setSubscribeEmail(!subscribeEmail);
 
   const handleFormSubmit = async (event) => {
-    setIsSendingLink(true);
-    {
-      /** TODO show spinny shit while email link is sending */
-    }
     event.preventDefault();
 
-    const emailQuery = query(collection(firestore, "users"), where("email", "==", email));
-    const querySnapshot = await getDocs(emailQuery);
+    // const emailQuery = query(collection(firestore, "users"), where("email", "==", email));
+    // const querySnapshot = await getDocs(emailQuery);
 
-    if (!querySnapshot.empty) {
-      alert("This email is already in use.");
-      return;
-    }
+    // if (!querySnapshot.empty) {
+    //   alert("This email is already in use.");
+    //   return;
+    // }
 
     const actionCodeSettings = {
-      url: window.location.href,
+      // Pass state via continue URL
+      url: `${window.location.origin}/finishSignUp?email=${encodeURIComponent(
+        email
+      )}&phone=${encodeURIComponent(phone)}&name=${encodeURIComponent(
+        name
+      )}&reason=${encodeURIComponent(reason)}&city=${encodeURIComponent(
+        city
+      )}&birthday=${encodeURIComponent(
+        birthday
+      )}&subscribeEmail=${subscribeEmail}&subscribeText=${subscribeText}`,
       handleCodeInApp: true,
     };
 
     try {
-      // await sendSignInLinkToEmail(auth, email, actionCodeSettings);
-      // window.localStorage.setItem("emailForSignIn", email);
-      // alert("Verification email sent! Check your inbox.");
-      await sendSignInLinkToEmail(auth, email, actionCodeSettings)
-        .then(() => {
-          // The link was successfully sent. Inform the user.
-          // Save the email locally so you don't need to ask the user for it again
-          // if they open the link on the same device.
-          window.localStorage.setItem("emailForSignIn", email);
-          alert("Verification email sent! Check your inbox.");
-          setIsSendingLink(false);
-          // ...
-        })
-        .catch((error) => {
-          // const errorCode = error.code;
-          const errorMessage = error.message;
-          console.log("error: " + errorMessage);
-          setIsSendingLink(false);
-
-          // ...
-        });
+      await sendSignInLinkToEmail(auth, email, actionCodeSettings);
+      window.localStorage.setItem("emailForSignIn", email);
+      alert("Verification email sent! Check your inbox.");
     } catch (error) {
       console.error("Error sending email: ", error);
-      setIsSendingLink(false);
       alert("Error sending verification email. Please try again.");
     }
   };
-
-  const handleMagicLinkSignIn = async () => {
-    const emailForSignIn = window.localStorage.getItem("emailForSignIn");
-    if (!emailForSignIn || !isSignInWithEmailLink(auth, window.location.href)) {
-      return;
-    }
-
-    try {
-      const result = await signInWithEmailLink(auth, emailForSignIn, window.location.href);
-      window.localStorage.removeItem("emailForSignIn");
-
-      const userDocRef = doc(firestore, "users", result.user.uid);
-      await setDoc(userDocRef, {
-        email: result.user.email,
-        phone: phone || null,
-        name: name || null,
-        reason: reason || null,
-        city: city || null,
-        birthday: birthday || null,
-        subscribeEmail: subscribeEmail,
-        subscribeText: subscribeText,
-      });
-
-      alert("Sign-in successful!");
-      navigate("/home"); // Redirect to the dashboard or desired page
-    } catch (error) {
-      console.error("Error signing in with email link: ", error);
-      alert("Error signing in. Please try again.");
-    }
-  };
-
-  useEffect(() => {
-    console.log("window: " + window.location.href);
-    handleMagicLinkSignIn();
-  }, []);
 
   return (
     <>
@@ -205,8 +143,6 @@ function SignInBasic() {
                     />
                   </MKBox>
                   <MKBox mb={2}>
-                    {/** make this required at least 60 characters */}
-
                     <MKInput
                       type="textarea"
                       label="Why do you want to join?"
@@ -297,13 +233,9 @@ function SignInBasic() {
                     </MKTypography>
                   </MKBox>
                   <MKBox mt={4} mb={1}>
-                    {!isSendingLink ? (
-                      <MKButton variant="gradient" color="primary" fullWidth type="submit">
-                        Join
-                      </MKButton>
-                    ) : (
-                      <CircularProgress alignItems="center"></CircularProgress>
-                    )}
+                    <MKButton variant="gradient" color="primary" fullWidth type="submit">
+                      Join
+                    </MKButton>
                   </MKBox>
                 </MKBox>
               </MKBox>

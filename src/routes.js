@@ -43,6 +43,7 @@ import { Icon } from "@mui/material";
 
 // Pages
 import SignIn from "layouts/pages/authentication/sign-in";
+import FinishSignUp from "pages/Home/components/finishSignUp";
 //View content (link to notion)
 //FAQ
 
@@ -59,6 +60,7 @@ const routes = [
     icon: <Icon>mail</Icon>,
     href: "https://brothas-express.beehiiv.com/",
   },
+  { route: "/finishSignUp", component: <FinishSignUp></FinishSignUp> },
   {
     // icon: <Icon>dashboard</Icon>,
     route: "/join",

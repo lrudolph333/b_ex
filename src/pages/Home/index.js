@@ -13,6 +13,8 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { useEffect, useState } from "react";
 // @mui material components
 import Card from "@mui/material/Card";
 
@@ -39,17 +41,37 @@ import Counters from "./sections/Counters";
 // Images
 
 function Home() {
+  const [user, setUser] = useState(null);
+  useEffect(() => {
+    const auth = getAuth();
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        console.log("user: " + user);
+        setUser(user);
+      } else {
+        setUser(null);
+      }
+    });
+
+    // Cleanup subscription on unmount
+    return () => unsubscribe();
+  }, []);
+
   return (
     <>
       <DefaultNavbar
         routes={routes}
-        action={{
-          type: "internal",
-          route: "/join",
-          label: "Join",
-
-          color: "primary",
-        }}
+        action={
+          user
+            ? //TODO implement logout functionality
+              null
+            : {
+                type: "internal",
+                route: "/join",
+                label: "Join",
+                color: "primary",
+              }
+        }
         sticky
       />
 

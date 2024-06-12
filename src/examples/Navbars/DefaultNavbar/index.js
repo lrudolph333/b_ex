@@ -13,8 +13,10 @@ Coded by www.creative-tim.com
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { useEffect, useState } from "react";
 
-import { Fragment, useEffect, useState } from "react";
+import { Fragment } from "react";
 
 // react-router components
 import { Link } from "react-router-dom";
@@ -42,6 +44,7 @@ import DefaultNavbarMobile from "examples/Navbars/DefaultNavbar/DefaultNavbarMob
 
 // Material Kit 2 React base styles
 import breakpoints from "assets/theme/base/breakpoints";
+import { doc, firestore, getDoc } from "../../../firebaseConfig"; // adjust the path as necessary
 
 function DefaultNavbar({ brand, routes, transparent, light, action, sticky, relative, center }) {
   const [dropdown, setDropdown] = useState("");
@@ -55,6 +58,35 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
   const [mobileView, setMobileView] = useState(false);
 
   const openMobileNavbar = () => setMobileNavbar(!mobileNavbar);
+  // const [user, setUser] = useState(null);
+  const [username, setUsername] = useState("");
+
+  useEffect(() => {
+    const auth = getAuth();
+    const unsubscribe = onAuthStateChanged(auth, async (user) => {
+      if (user) {
+        // setUser(user);
+        // console.log("User signed in:", user);
+
+        // Fetch the user's name from Firestore
+        const userDocRef = doc(firestore, "users", user.uid);
+        const userDoc = await getDoc(userDocRef);
+
+        if (userDoc.exists()) {
+          const userData = userDoc.data();
+          setUsername(userData.name || "");
+        } else {
+          console.log("No such document!");
+        }
+      } else {
+        // setUser(null);
+        setUsername("");
+      }
+    });
+
+    // Cleanup subscription on unmount
+    return () => unsubscribe();
+  }, []);
 
   useEffect(() => {
     // A function that sets the display state for the DefaultNavbarMobile.
@@ -484,6 +516,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
               {brand}
             </MKTypography>
           </MKBox>
+
           <MKBox
             color="inherit"
             display={{ xs: "none", lg: "flex" }}
@@ -526,6 +559,21 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
                 </MKButton>
               ))}
           </MKBox>
+          {username && (
+            <MKBox
+              component={Link}
+              to="/"
+              lineHeight={1}
+              py={transparent ? 1.5 : 0.75}
+              mx={2}
+              pl={relative || transparent ? 0 : { xs: 0, lg: 1 }}
+            >
+              <MKTypography variant="button" fontWeight="bold" color={"primary"}>
+                {/* <MKTypography variant="button" fontWeight="bold" color={light ? "white" : "dark"}> */}
+                {"Welcome, " + username}
+              </MKTypography>
+            </MKBox>
+          )}
           <MKBox
             display={{ xs: "inline-block", lg: "none" }}
             lineHeight={0}
