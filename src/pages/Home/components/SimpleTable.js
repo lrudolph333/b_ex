@@ -32,20 +32,24 @@ const SimpleTable = () => {
         // const q = query(collection(firestore, "users"), orderBy("createdAt", "desc"), limit(5));
         const q = query(collection(firestore, "users"), limit(5));
         const querySnapshot = await getDocs(q);
-        console.log("got docs");
+        // console.log("got docs");
         const membersData = querySnapshot.docs.map((doc) => {
           const data = doc.data();
-          console.log("data:" + data);
-          var joinedDate = Date(data.createdAt);
+          // console.log("data:" + data);
+          // var joinedDate = Date(data.createdAt);
           // const options = { weekday: "short", year: "numeric", month: "short", day: "numeric" };
           // const formattedDate = joinedDate.toLocaleDateString("en-US", options);
+          const joinedDate = new Date(data.createdAt); // Assuming createdAt is a Firestore Timestamp
+
+          const options = { year: "numeric", month: "short", day: "numeric" };
+          const formattedDate = joinedDate.toLocaleDateString("en-US", options);
 
           return {
             id: doc.id,
             name: data.name || "",
             city: data.city || "",
             birthdate: data.birthday || "",
-            createdAt: joinedDate, //? data.createdAt.toDate() : new Date(),
+            createdAt: formattedDate, //? data.createdAt.toDate() : new Date(),
           };
         });
         setMembers(membersData);
@@ -91,7 +95,7 @@ const SimpleTable = () => {
                   </TableCell>
                   <TableCell align="left" width="20%">
                     {/* {member.createdAt.toLocaleDateString()} */}
-                    {member.createdAt}
+                    {member.createdAt.toString()}
                   </TableCell>
                 </TableRow>
               ))}
