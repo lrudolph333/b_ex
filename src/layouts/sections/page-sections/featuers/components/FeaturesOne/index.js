@@ -39,7 +39,7 @@ function FeaturesOne() {
               </MKTypography>
             </MKTypography>
 
-            <MKTypography
+            {/* <MKTypography
               component="a"
               href="https://www.instagram.com/brothas_express/"
               target="_blank"
@@ -63,7 +63,7 @@ function FeaturesOne() {
               }}
             >
               Checkout season 1<Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
-            </MKTypography>
+            </MKTypography> */}
           </Grid>
           <Grid item xs={12} lg={6} sx={{ ml: { xs: -2, lg: "auto" }, mt: { xs: 6, lg: 0 } }}>
             <Stack>

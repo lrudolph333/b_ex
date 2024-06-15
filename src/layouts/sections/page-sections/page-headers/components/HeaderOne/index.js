@@ -38,7 +38,8 @@ function HeaderOne(user) {
         <MKBox
           display="flex"
           alignItems="center"
-          minHeight="90vh"
+          minHeight="100vh"
+          // minWidth="100vw"
           sx={{
             backgroundImage: ({ palette: { gradients }, functions: { linearGradient, rgba } }) =>
               `${linearGradient(
@@ -99,7 +100,11 @@ function HeaderOne(user) {
                     <MKButton color="primary" href="/join">
                       Join
                     </MKButton>
-                    <MKButton variant="outlined" color="white" href="/join">
+                    <MKButton
+                      variant="outlined"
+                      color="white"
+                      href="https://www.instagram.com/brothas_express/"
+                    >
                       View season 1
                     </MKButton>
                   </Stack>

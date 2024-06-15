@@ -49,6 +49,7 @@ function Counters() {
             <Divider orientation="vertical" sx={{ display: { xs: "none", md: "block" }, mx: 0 }} />
             <DefaultCounterCard
               count={2}
+              color={"secondary.light"}
               // suffix="+"
               title="Browse the Library"
               description="Explore all of our curated content, session guides, and more in an organized, one-stop-shop."
@@ -58,6 +59,7 @@ function Counters() {
           <Grid item xs={12} md={4}>
             <DefaultCounterCard
               count={3}
+              color={"secondary.light"}
               title="Enter the Express Nexus"
               description="Enter our platform to connect with other Black men on a similar journey."
             />

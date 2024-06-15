@@ -100,12 +100,6 @@ function Home() {
             variant="middle"
             sx={{ marginLeft: "25%", marginRight: "25%", bgcolor: "text.main" }}
           />
-          {/** Meet the Founder */}
-          <Profile></Profile>
-          <Divider
-            variant="middle"
-            sx={{ marginLeft: "25%", marginRight: "25%", bgcolor: "text.main" }}
-          />
           {/** Members */}
           {/* <Team></Team> */}
           <SimpleTable></SimpleTable>
@@ -113,11 +107,18 @@ function Home() {
             variant="middle"
             sx={{ marginLeft: "25%", marginRight: "25%", bgcolor: "text.main" }}
           />
+          {/** Meet the Founder */}
+          <Profile></Profile>
+          <Divider
+            variant="middle"
+            sx={{ marginLeft: "25%", marginRight: "25%", bgcolor: "text.main" }}
+          />
+
           {/** FAQs */}
           <FAQSection></FAQSection>
         </Card>
         <MKBox pt={6} px={1} mt={6} mb={5}>
-          <SimpleFooter content={footerRoutes} />
+          <SimpleFooter content={footerRoutes} light />
         </MKBox>
       </MKBox>
     </>
