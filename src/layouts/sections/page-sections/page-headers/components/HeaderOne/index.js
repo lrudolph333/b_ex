@@ -104,7 +104,7 @@ function HeaderOne(user) {
                     {/**TODO Make this button really pop, animate it */}
 
                     <MKButton color="primary" target="_blank" href="https://discord.gg/R5Q3XEzSX9">
-                      Enter Brothas Express Nexus
+                      Enter Express Nexus
                     </MKButton>
                   </Stack>
                 )}

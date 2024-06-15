@@ -41,7 +41,7 @@ function Counters() {
               count={1}
               // suffix="+"
               title="Join Brothas Express"
-              description="Fill out a 60 second form, and you'll receive access to the Discord and discussion Calendar."
+              description="Fill out a 60 second form, and you'll receive full access to the Express Nexus, Library, and discussion Calendar."
             />
           </Grid>
           <Grid item xs={12} md={4} display="flex">
@@ -50,15 +50,15 @@ function Counters() {
               count={2}
               // suffix="+"
               title="Browse the Library"
-              description="Mix the sections, change the colors and unleash your creativity"
+              description="Explore all of our curated content, session guides, and more in an organized, one-stop-shop."
             />
             <Divider orientation="vertical" sx={{ display: { xs: "none", md: "block" }, ml: 0 }} />
           </Grid>
           <Grid item xs={12} md={4}>
             <DefaultCounterCard
               count={3}
-              title="Invite a friend"
-              description="Save 3-4 weeks of work when you use our pre-made pages for your website"
+              title="Enter the Express Nexus"
+              description="Enter our platform to connect with other Black men on a similar journey."
             />
           </Grid>
         </Grid>

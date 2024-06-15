@@ -34,10 +34,16 @@ function FeaturesOne() {
               How does Brothas Express work?
             </MKTypography>
             <MKTypography variant="body2" color="text" mb={2}>
-              We are a community of black men who share one common goal; to redefine thriving,
-              healthy masculinity for the benefit of ourselves and the relationships we have with
-              others.
+              <MKTypography variant="body2" color="text" mb={2}>
+                {"We are a community of Black men who share one common goal:"}
+              </MKTypography>
+              <MKTypography variant="body2" fontWeight={"bold"} color="text" mb={2}>
+                {" to redefine thriving, " +
+                  "healthy masculinity for the benefit of ourselves and the relationships we have with " +
+                  "others."}
+              </MKTypography>
             </MKTypography>
+
             <MKTypography
               component="a"
               href="https://www.instagram.com/brothas_express/"
@@ -61,7 +67,7 @@ function FeaturesOne() {
                 },
               }}
             >
-              View our season 1<Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
+              Checkout season 1<Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
             </MKTypography>
           </Grid>
           <Grid item xs={12} lg={6} sx={{ ml: { xs: -2, lg: "auto" }, mt: { xs: 6, lg: 0 } }}>
@@ -78,12 +84,12 @@ function FeaturesOne() {
                     justifyContent="center"
                     borderRadius="8px"
                   >
-                    <Icon fontSize="small">mediation</Icon>
+                    <Icon fontSize="large">diversity_3</Icon>
                   </Box>
                 </Grid>
                 <Grid item xs>
                   <MKTypography variant="body2" color="textSecondary" pl={2}>
-                    Weekly virtual discussion sessions on specific topics
+                    {"Weekly discussion sessions on specific topics related to masculinity"}
                   </MKTypography>
                 </Grid>
               </Grid>
@@ -99,13 +105,13 @@ function FeaturesOne() {
                     justifyContent="center"
                     borderRadius="8px"
                   >
-                    <Icon fontSize="small">token</Icon>
+                    <Icon fontSize="large">book</Icon>
                   </Box>
                 </Grid>
                 <Grid item xs>
                   <MKTypography variant="body2" color="textSecondary" pl={2}>
                     {
-                      " A growing library of digestable, curated content from thought-leaders on masculinity"
+                      " A growing Library of curated content from thought-leaders, scholars, and peers"
                     }
                   </MKTypography>
                 </Grid>
@@ -122,12 +128,14 @@ function FeaturesOne() {
                     justifyContent="center"
                     borderRadius="8px"
                   >
-                    <Icon fontSize="small">settings_overscan</Icon>
+                    <Icon fontSize="large">forum</Icon>
                   </Box>
                 </Grid>
                 <Grid item xs>
                   <MKTypography variant="body2" color="textSecondary" pl={2}>
-                    {"An exclusive online space to share thoughts ask advice of each other."}
+                    {
+                      "An exclusive online space to share thoughts and ask advice of each other whenever."
+                    }
                   </MKTypography>
                 </Grid>
               </Grid>
