@@ -42,7 +42,7 @@ function Counters() {
               color={"secondary.light"}
               // suffix="+"
               title="Join Brothas Express"
-              description="Fill out a 60 second form, and you'll receive full access to the Express Nexus, Library, and discussion Calendar."
+              description="Complete a 60 second form to receive full access to the Express Nexus, Library, and discussion Calendar."
             />
           </Grid>
           <Grid item xs={12} md={4} display="flex">
@@ -61,7 +61,7 @@ function Counters() {
               count={3}
               color={"secondary.light"}
               title="Enter the Express Nexus"
-              description="Enter our platform to connect with other Black men on a similar journey."
+              description="Enter our platform to connect with other Black men on the same journey."
             />
           </Grid>
         </Grid>

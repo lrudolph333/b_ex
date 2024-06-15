@@ -118,7 +118,8 @@ function SimpleFooter({ company, links, light }) {
                 color="#E1306C"
                 fontSize="1.125rem"
                 className="fab fa-instagram"
-                sx={{ margin: "0 10px" }}
+                mx={2}
+                // sx={{ margin: "0 10px" }}
               />
             </Link>
             <Link
@@ -131,7 +132,9 @@ function SimpleFooter({ company, links, light }) {
                 color="#E1306C"
                 fontSize="1.125rem"
                 className="fab fa-tiktok"
-                sx={{ margin: "0 10px" }}
+                mr={2}
+
+                // sx={{ margin: "0 10px" }}
               />
             </Link>
             {/* <Link href="https://treyr.me" target="_blank" rel="noopener noreferrer">

@@ -35,7 +35,7 @@ function FeaturesOne() {
             </MKTypography>
             <MKTypography variant="body1" color="text" mb={2}>
               <MKTypography variant="body1" color="text" mb={0}>
-                {"How do we carry out our mission"}
+                {"How do we carry out our mission?"}
               </MKTypography>
             </MKTypography>
 
@@ -151,7 +151,7 @@ function FeaturesOne() {
                     pl={2}
                   >
                     {
-                      "An exclusive online space to share thoughts and ask advice of each other whenever."
+                      "Exclusive access to Express Nexus, an online space to share thoughts and ask advice of each other whenever"
                     }
                   </MKTypography>
                 </Grid>
