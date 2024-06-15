@@ -14,9 +14,7 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { useEffect, useState } from "react";
-
-import { Fragment } from "react";
+import { Fragment, useEffect, useState } from "react";
 
 // react-router components
 import { Link } from "react-router-dom";
@@ -531,16 +529,13 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
                 <MKButton
                   component={Link}
                   to={action.route}
-                  variant={
-                    action.color === "white" || action.color === "default"
-                      ? "contained"
-                      : "gradient"
-                  }
-                  color={action.color ? action.color : "primary"}
-                  //TODO idk why this won't pull from theme
-                  // color={"#73020C"}
-                  // variant={"contained"}
-                  // color={"#73020C"}
+                  // variant={
+                  //   action.color === "white" || action.color === "default"
+                  //     ? "contained"
+                  //     : "gradient"
+                  // }
+                  // color={action.color || theme.palette.primary.main} // color={action.color ? action.color : "primary"}
+                  color={action.color || "primary"} // color={action.color ? action.color : "primary"}
                   size="small"
                 >
                   {action.label}
@@ -556,7 +551,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
                       ? "contained"
                       : "gradient"
                   }
-                  color={action.color ? action.color : "info"}
+                  color={action.color ? action.color : "primary"}
                   size="small"
                 >
                   {action.label}

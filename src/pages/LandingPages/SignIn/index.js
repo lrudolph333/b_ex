@@ -1,5 +1,6 @@
 import { Box, Card, Grid, Switch } from "@mui/material";
-import bgImage from "assets/images/bg-sign-in-basic.jpeg";
+import bgImage from "assets/images/landing2.png";
+import theme from "assets/theme";
 import MKBox from "components/MKBox";
 import MKButton from "components/MKButton";
 import MKInput from "components/MKInput";
@@ -10,9 +11,7 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import routes from "routes";
-
 import { auth, sendSignInLinkToEmail } from "../../../firebaseConfig"; // adjust the path as necessary
-
 function SignInBasic() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -26,6 +25,7 @@ function SignInBasic() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    console.log("theme: " + theme.palette.primary.main);
     const auth = getAuth();
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -84,7 +84,7 @@ function SignInBasic() {
   };
 
   return (
-    <>
+    <Box height="100%" bgColor={"#73020C"}>
       <DefaultNavbar
         routes={routes}
         action={
@@ -104,9 +104,10 @@ function SignInBasic() {
         position="absolute"
         top={0}
         left={0}
-        zIndex={1}
+        // zIndex={1}
         width="100%"
         minHeight="100vh"
+        bgColor={"dark"}
         sx={{
           backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
             `${linearGradient(
@@ -119,22 +120,29 @@ function SignInBasic() {
         }}
       />
       <Box height={"10vh"}></Box>
-      <MKBox mt={6} px={1} width="100%" mx="auto" position="relative" zIndex={2}>
+      <MKBox mt={6} px={1} width="100%" mx="auto" position="relative">
         <Grid container spacing={1} justifyContent="center" alignItems="center" height="100%">
           <Grid item xs={11} sm={9} md={5} lg={4} xl={3}>
             <Card>
               <MKBox
-                variant="gradient"
-                bgColor="primary"
+                // variant="gradient"
+                // bgColor={"dark"}
+                bgColor={theme.palette.primary.main}
                 borderRadius="lg"
-                coloredShadow="info"
+                coloredShadow="dark"
                 mx={2}
                 mt={-2}
                 p={2}
                 mb={1}
                 textAlign="center"
               >
-                <MKTypography variant="h4" fontWeight="medium" color="white" mt={1}>
+                <MKTypography
+                  bgColor={theme.palette.primary.main}
+                  variant="h4"
+                  fontWeight="medium"
+                  color="white"
+                  mt={1}
+                >
                   Join Brothas Express
                 </MKTypography>
               </MKBox>
@@ -274,8 +282,8 @@ function SignInBasic() {
                     </MKTypography>
                   </MKBox>
                   <MKBox mt={4} mb={1}>
-                    <MKButton variant="gradient" color="primary" fullWidth type="submit">
-                      Join
+                    <MKButton color="primary" fullWidth type="submit">
+                      Submit
                     </MKButton>
                   </MKBox>
                 </MKBox>
@@ -285,10 +293,10 @@ function SignInBasic() {
         </Grid>
       </MKBox>
 
-      <MKBox py={3} px={1} mt={6} width="100%">
+      <MKBox bgColor={"dark"} py={2} px={1} mt={2} width="100%">
         <SimpleFooter light />
       </MKBox>
-    </>
+    </Box>
   );
 }
 

@@ -8,6 +8,7 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
+import Fade from "@mui/material/Fade";
 import MKTypography from "components/MKTypography";
 
 const faqs = [
@@ -122,12 +123,30 @@ const FAQSection = () => {
           </Grid>
         </Grid>
         {faqs.map((faq, index) => (
-          <Accordion sx={{ padding: "3px", margin: "3px" }} key={index}>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+          <Accordion
+            slots={{ transition: Fade }}
+            slotProps={{ transition: { timeout: 400 } }}
+            sx={{
+              padding: "3px",
+              margin: "10px",
+              borderTopColor: "transparent",
+              borderRadius: "15px",
+            }}
+            key={index}
+          >
+            <AccordionSummary
+              sx={{
+                paddingLeft: "10px",
+                borderTopColor: "transparent",
+                borderRadius: "15px",
+              }}
+              expandIcon={<ExpandMoreIcon />}
+              // mx={5}
+            >
               <Typography variant="h6">{faq.question}</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>{faq.answer}</Typography>
+              <Typography color={{}}>{faq.answer}</Typography>
             </AccordionDetails>
           </Accordion>
         ))}

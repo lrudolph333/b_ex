@@ -52,7 +52,7 @@ function HeaderOne(user) {
         >
           <Container>
             <Box height={"10vh"}></Box>
-            <Grid my={isMdDown ? 5 : 2} container flexDirection="row" justifyContent="center">
+            <Grid my={isMdDown ? 10 : 2} container flexDirection="row" justifyContent="center">
               <Grid
                 container
                 item
@@ -112,7 +112,7 @@ function HeaderOne(user) {
                   <Stack
                     direction={isMdDown ? "column" : "row"}
                     spacing={1}
-                    mt={3}
+                    my={3}
                     alignItems="center"
                   >
                     {/**TODO Make this button really pop, animate it */}
@@ -132,7 +132,7 @@ function HeaderOne(user) {
                 display="flex"
                 justifyContent={"center"}
               >
-                <ReactPlayer width="50%" url="https://www.youtube.com/watch?v=LXb3EKWsInQ" />
+                <ReactPlayer width="50%" url="https://youtube.com/shorts/WQma8bDLY80" />
               </Grid>
             </Grid>
             <Box height={"10vh"}></Box>

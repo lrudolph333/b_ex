@@ -69,13 +69,13 @@ function Home() {
                 type: "internal",
                 route: "/join",
                 label: "Join",
-                // color: {{}},
+                color: "primary",
               }
         }
         sticky
       />
 
-      <MKBox display="flex" flexDirection="column" bgColor="info">
+      <MKBox display="flex" flexDirection="column" bgColor="dark">
         <HeaderOne user={user}></HeaderOne>
         <Card
           sx={{
