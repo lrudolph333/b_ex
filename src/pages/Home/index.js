@@ -69,13 +69,13 @@ function Home() {
                 type: "internal",
                 route: "/join",
                 label: "Join",
-                color: "primary",
+                // color: {{}},
               }
         }
         sticky
       />
 
-      <MKBox display="flex" flexDirection="column" bgColor="white">
+      <MKBox display="flex" flexDirection="column" bgColor="info">
         <HeaderOne user={user}></HeaderOne>
         <Card
           sx={{
@@ -90,24 +90,31 @@ function Home() {
         >
           {/** Introduction */}
           <FeaturesOne></FeaturesOne>
-          <Divider variant="middle" />
-
+          <Divider
+            variant="middle"
+            sx={{ marginLeft: "25%", marginRight: "25%", bgcolor: "text.main" }}
+          />
           {/** How to get involved */}
           <Counters></Counters>
-          <Divider variant="middle" />
-
+          <Divider
+            variant="middle"
+            sx={{ marginLeft: "25%", marginRight: "25%", bgcolor: "text.main" }}
+          />
           {/** Meet the Founder */}
           <Profile></Profile>
-          <Divider variant="middle" />
-
+          <Divider
+            variant="middle"
+            sx={{ marginLeft: "25%", marginRight: "25%", bgcolor: "text.main" }}
+          />
           {/** Members */}
           {/* <Team></Team> */}
           <SimpleTable></SimpleTable>
-          <Divider variant="middle" />
-
+          <Divider
+            variant="middle"
+            sx={{ marginLeft: "25%", marginRight: "25%", bgcolor: "text.main" }}
+          />
           {/** FAQs */}
           <FAQSection></FAQSection>
-          <Divider variant="middle" />
         </Card>
         <MKBox pt={6} px={1} mt={6} mb={5}>
           <SimpleFooter content={footerRoutes} />

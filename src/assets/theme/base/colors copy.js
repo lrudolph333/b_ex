@@ -25,9 +25,8 @@ export default {
   },
 
   text: {
-    main: "#382824",
-    focus: "#6B4443",
-    // focus: "#7b809a",
+    main: "#7b809a",
+    focus: "#7b809a",
   },
 
   transparent: {
@@ -35,14 +34,14 @@ export default {
   },
 
   white: {
-    main: "#f8f9fa",
-    focus: "#f8f9fa",
+    main: "#ffffff",
+    focus: "#ffffff",
   },
 
   black: {
-    light: "#343a40",
-    main: "#212529",
-    focus: "#343a40",
+    light: "#000000",
+    main: "#000000",
+    focus: "#000000",
   },
 
   primary: {
@@ -51,8 +50,8 @@ export default {
   },
 
   secondary: {
-    main: "#733042",
-    focus: "#733042",
+    main: "#7b809a",
+    focus: "#8f93a9",
   },
 
   info: {
@@ -203,7 +202,7 @@ export default {
 
   badgeColors: {
     primary: {
-      background: "#73020C",
+      background: "#f8b3ca",
       text: "#cc084b",
     },
 

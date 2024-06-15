@@ -116,7 +116,7 @@ const FAQSection = () => {
             <MKTypography variant="h3" color="primary" textAlign="center">
               Frequently Asked Questions
             </MKTypography>
-            <MKTypography variant="body2" color="white" textAlign="center" opacity={0.8}>
+            <MKTypography variant="body2" color="text" textAlign="center" opacity={0.8}>
               {"We got answers."}
             </MKTypography>
           </Grid>

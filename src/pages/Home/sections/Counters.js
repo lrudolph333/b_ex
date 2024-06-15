@@ -39,6 +39,7 @@ function Counters() {
           <Grid item xs={12} md={4}>
             <DefaultCounterCard
               count={1}
+              color={"secondary.light"}
               // suffix="+"
               title="Join Brothas Express"
               description="Fill out a 60 second form, and you'll receive full access to the Express Nexus, Library, and discussion Calendar."

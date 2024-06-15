@@ -536,7 +536,11 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
                       ? "contained"
                       : "gradient"
                   }
-                  color={action.color ? action.color : "info"}
+                  color={action.color ? action.color : "primary"}
+                  //TODO idk why this won't pull from theme
+                  // color={"#73020C"}
+                  // variant={"contained"}
+                  // color={"#73020C"}
                   size="small"
                 >
                   {action.label}

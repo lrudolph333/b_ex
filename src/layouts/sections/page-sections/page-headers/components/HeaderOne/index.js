@@ -23,11 +23,15 @@ import MKTypography from "components/MKTypography";
 
 // Images
 import bgImage from "assets/images/landing.png";
+import { useEffect } from "react";
 import ReactPlayer from "react-player";
 
 function HeaderOne(user) {
   const isMdDown = useMediaQuery((theme) => theme.breakpoints.down("md"));
 
+  useEffect(() => {
+    console.log("user: " + JSON.stringify(user, null, 2));
+  });
   return (
     <>
       <MKBox component="header" position="relative" height="100%">
@@ -47,7 +51,7 @@ function HeaderOne(user) {
         >
           <Container>
             <Box height={"10vh"}></Box>
-            <Grid mt={2} mb={2} container flexDirection="row" justifyContent="center">
+            <Grid my={isMdDown ? 5 : 2} container flexDirection="row" justifyContent="center">
               <Grid
                 container
                 item
@@ -81,17 +85,22 @@ function HeaderOne(user) {
                     textAlign: isMdDown ? "center" : "left",
                   }}
                 >
-                  A reflective conversation space to redefine thriving manhood for Black men.
+                  {
+                    "We are a community of Black men striving to redefine thriving, healthy masculinity."
+                  }
                 </MKTypography>
-                {!user ? (
+                {user.user == null ? (
                   <Stack
                     direction={isMdDown ? "column" : "row"}
                     spacing={1}
-                    mt={3}
+                    my={3}
                     alignItems="center"
                   >
-                    <MKButton color="white" href="/join">
+                    <MKButton color="primary" href="/join">
                       Join
+                    </MKButton>
+                    <MKButton variant="outlined" color="white" href="/join">
+                      View season 1
                     </MKButton>
                   </Stack>
                 ) : (

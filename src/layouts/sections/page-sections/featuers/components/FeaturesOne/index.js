@@ -30,17 +30,12 @@ function FeaturesOne() {
       <Container>
         <Grid container alignItems="center">
           <Grid item xs={12} lg={5}>
-            <MKTypography variant="h3" my={1}>
+            <MKTypography variant="h3" my={2}>
               How does Brothas Express work?
             </MKTypography>
-            <MKTypography variant="body2" color="text" mb={2}>
-              <MKTypography variant="body2" color="text" mb={2}>
-                {"We are a community of Black men who share one common goal:"}
-              </MKTypography>
-              <MKTypography variant="body2" fontWeight={"bold"} color="text" mb={2}>
-                {" to redefine thriving, " +
-                  "healthy masculinity for the benefit of ourselves and the relationships we have with " +
-                  "others."}
+            <MKTypography variant="body1" color="text" mb={2}>
+              <MKTypography variant="body1" color="text" mb={0}>
+                {"How do we carry out our mission"}
               </MKTypography>
             </MKTypography>
 
@@ -84,11 +79,19 @@ function FeaturesOne() {
                     justifyContent="center"
                     borderRadius="8px"
                   >
-                    <Icon fontSize="large">diversity_3</Icon>
+                    <Icon sx={{ color: "light.main" }} fontSize="large">
+                      diversity_3
+                    </Icon>
                   </Box>
                 </Grid>
                 <Grid item xs>
-                  <MKTypography variant="body2" color="textSecondary" pl={2}>
+                  <MKTypography
+                    variant="subtitle2"
+                    fontWeight={"bold"}
+                    sx={{ color: "text.focus" }}
+                    pl={2}
+                  >
+                    {" "}
                     {"Weekly discussion sessions on specific topics related to masculinity"}
                   </MKTypography>
                 </Grid>
@@ -105,11 +108,19 @@ function FeaturesOne() {
                     justifyContent="center"
                     borderRadius="8px"
                   >
-                    <Icon fontSize="large">book</Icon>
+                    <Icon sx={{ color: "light.main" }} fontSize="large">
+                      book
+                    </Icon>
                   </Box>
                 </Grid>
                 <Grid item xs>
-                  <MKTypography variant="body2" color="textSecondary" pl={2}>
+                  <MKTypography
+                    variant="subtitle2"
+                    fontWeight={"bold"}
+                    sx={{ color: "text.focus" }}
+                    pl={2}
+                  >
+                    {" "}
                     {
                       " A growing Library of curated content from thought-leaders, scholars, and peers"
                     }
@@ -122,17 +133,23 @@ function FeaturesOne() {
                     width="3rem"
                     height="3rem"
                     bgcolor="info.main"
-                    color="white"
                     display="flex"
                     alignItems="center"
                     justifyContent="center"
                     borderRadius="8px"
                   >
-                    <Icon fontSize="large">forum</Icon>
+                    <Icon sx={{ color: "light.main" }} fontSize="large">
+                      forum
+                    </Icon>
                   </Box>
                 </Grid>
                 <Grid item xs>
-                  <MKTypography variant="body2" color="textSecondary" pl={2}>
+                  <MKTypography
+                    variant="subtitle2"
+                    fontWeight={"bold"}
+                    sx={{ color: "text.focus" }}
+                    pl={2}
+                  >
                     {
                       "An exclusive online space to share thoughts and ask advice of each other whenever."
                     }
