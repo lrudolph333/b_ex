@@ -23,9 +23,9 @@ import MKBox from "components/MKBox";
 
 // Material Kit 2 React examples
 import Divider from "@mui/material/Divider";
-import SimpleFooter from "examples/Footers/SimpleFooter";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
-import FeaturesOne from "layouts/sections/components/FeaturesOne";
+import FeaturesOne from "./components/FeaturesOne";
+import SimpleFooter from "./components/SimpleFooter";
 // Home page sections
 
 // Home page components
@@ -34,9 +34,9 @@ import FAQSection from "./components/FAQ";
 import footerRoutes from "footer.routes";
 import routes from "routes";
 // PageHeaders page components
-import HeaderOne from "layouts/sections/page-sections/page-headers/components/HeaderOne";
 import SimpleTable from "./components/SimpleTable";
 import Counters from "./sections/Counters";
+import HeaderOne from "./sections/HeaderOne";
 import Profile from "./sections/Profile";
 // Images
 
