@@ -42,8 +42,8 @@ Coded by www.creative-tim.com
 import { Icon } from "@mui/material";
 
 // Pages
-import SignIn from "layouts/pages/authentication/sign-in";
 import FinishSignUp from "pages/Home/components/finishSignUp";
+import SignIn from "./pages/LandingPages/SignIn/index";
 //View content (link to notion)
 //FAQ
 

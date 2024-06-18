@@ -25,7 +25,7 @@ import MKBox from "components/MKBox";
 import Divider from "@mui/material/Divider";
 import SimpleFooter from "examples/Footers/SimpleFooter";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
-import FeaturesOne from "layouts/sections/page-sections/featuers/components/FeaturesOne";
+import FeaturesOne from "layouts/sections/components/FeaturesOne";
 // Home page sections
 
 // Home page components
@@ -35,9 +35,9 @@ import footerRoutes from "footer.routes";
 import routes from "routes";
 // PageHeaders page components
 import HeaderOne from "layouts/sections/page-sections/page-headers/components/HeaderOne";
-import Profile from "pages/LandingPages/Author/sections/Profile";
 import SimpleTable from "./components/SimpleTable";
 import Counters from "./sections/Counters";
+import Profile from "./sections/Profile";
 // Images
 
 function Home() {

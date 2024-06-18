@@ -1,5 +1,4 @@
 import MKBox from "components/MKBox";
-import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import {
@@ -10,6 +9,7 @@ import {
   setDoc,
   signInWithEmailLink,
 } from "../../../firebaseConfig"; // adjust the path as necessary
+import DefaultInfoCard from "./DefaultInfoCard";
 
 const FinishSignUp = () => {
   const navigate = useNavigate();
