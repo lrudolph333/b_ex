@@ -103,6 +103,7 @@ function HeaderOne(user) {
                     <MKButton
                       variant="outlined"
                       color="white"
+                      target="_blank"
                       href="https://www.instagram.com/brothas_express/"
                     >
                       View season 1
