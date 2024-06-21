@@ -35,6 +35,18 @@ const faqs = [
       " \n\nWe want to change that.",
   },
   {
+    question: "How do I join the virtual discussion each week?",
+    answer:
+      "After joining Brothas Express on our website, the homepage will have a button to 'Enter the Express Nexus'." +
+      " \nThis will take you to our online community forum, which contains a voice channel. Click on the voice channel during our weekly meeting time, and you're in!",
+  },
+  {
+    question: "What is 'Express Nexus'",
+    answer:
+      "Express Nexus is an online forum for us to connect, share advice, share a laugh, hop in virtual meeting spaces, and build a sense of community. " +
+      " It is hosted on Discord, which provides helpful features and easy functionality to create our space.",
+  },
+  {
     question: "What does a typical Brothas Express discussion look like?",
     answer:
       "Our virtual (in-person on the way!) discussions last 60-90 minutes and follow the same format. We start by briefly expressing current challenges and victorys in our life. " +

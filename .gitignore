@@ -27,4 +27,8 @@ yarn.lock
 commit.sh
 
 #priv keys
+credentials.json
+credentials1.json
+credentials*.json
 famous-*.json
+token.json
