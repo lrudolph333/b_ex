@@ -41,7 +41,7 @@ const faqs = [
       " \nThis will take you to our online community forum, which contains a voice channel. Click on the voice channel during our weekly meeting time, and you're in!",
   },
   {
-    question: "What is 'Express Nexus'",
+    question: "What is 'Express Nexus'?",
     answer:
       "Express Nexus is an online forum for us to connect, share advice, share a laugh, hop in virtual meeting spaces, and build a sense of community. " +
       " It is hosted on Discord, which provides helpful features and easy functionality to create our space.",
