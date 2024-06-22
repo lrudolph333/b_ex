@@ -26,6 +26,7 @@ function SignInBasic() {
 
   useEffect(() => {
     console.log("theme: " + theme.palette.primary.main);
+    console.log("window: " + window.location.origin);
     const auth = getAuth();
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -61,7 +62,8 @@ function SignInBasic() {
 
     const actionCodeSettings = {
       // Pass state via continue URL
-      url: `${window.location.origin}/finishSignUp?email=${encodeURIComponent(
+      // url: `${window.location.origin}/finishSignUp?email=${encodeURIComponent(
+      url: `https://brothas.express/finishSignUp?email=${encodeURIComponent(
         email
       )}&phone=${encodeURIComponent(phone)}&name=${encodeURIComponent(
         name
