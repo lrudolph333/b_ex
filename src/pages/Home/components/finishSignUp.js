@@ -58,6 +58,8 @@ const FinishSignUp = () => {
         console.error("Error signing in with email link: ", error);
         if (error.message.includes("invalid-action-code")) {
           alert("This can happen if the code has already been used.");
+        } else if (error.message.includes("expired-action-code")) {
+          alert("This auth code has expired. Please request a new one.");
         } else {
           alert("Error signing in. Please try again.");
         }
