@@ -23,15 +23,14 @@ import MKTypography from "components/MKTypography";
 
 // Images
 import bgImage from "assets/images/landing.png";
-import { useEffect } from "react";
 import ReactPlayer from "react-player";
 
 function HeaderOne(user) {
   const isMdDown = useMediaQuery((theme) => theme.breakpoints.down("md"));
 
-  useEffect(() => {
-    console.log("user: " + JSON.stringify(user, null, 2));
-  });
+  // useEffect(() => {
+  //   console.log("user: " + JSON.stringify(user, null, 2));
+  // });
   return (
     <>
       <MKBox component="header" position="relative" height="100%">

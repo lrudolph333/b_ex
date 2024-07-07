@@ -78,7 +78,7 @@ function SignInBasic() {
     try {
       await sendSignInLinkToEmail(auth, email, actionCodeSettings);
       window.localStorage.setItem("emailForSignIn", email);
-      alert("Verification email sent! Check your inbox (spam).");
+      alert("Verification email sent! Check your inbox (and spam).");
     } catch (error) {
       console.error("Error sending email: ", error);
       alert("Error sending verification email. Please try again.");

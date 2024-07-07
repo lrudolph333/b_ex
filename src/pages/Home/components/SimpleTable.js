@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
-import { collection, getDocs, limit, query } from "firebase/firestore";
+import { collection, getDocs, limit, orderBy, query } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { firestore } from "../../../firebaseConfig"; // Adjust the path as necessary
 
@@ -27,20 +27,26 @@ const SimpleTable = () => {
   const [members, setMembers] = useState([]);
 
   useEffect(() => {
+    // const startDate = new Date("1990-01-01");
+    // const endDate = new Date("2010-12-31");
+
     const fetchMembers = async () => {
       try {
         // const q = query(collection(firestore, "users"), orderBy("createdAt", "desc"), limit(5));
-        const q = query(collection(firestore, "users"), limit(5));
+        const q = query(
+          collection(firestore, "users"),
+          // where("birthday", ">=", startDate),
+          // where("birthday", "<=", endDate),
+          orderBy("createdAt", "desc"),
+          limit(5)
+        );
         const querySnapshot = await getDocs(q);
         // console.log("got docs");
         const membersData = querySnapshot.docs.map((doc) => {
           const data = doc.data();
-          // console.log("data:" + data);
-          // var joinedDate = Date(data.createdAt);
-          // const options = { weekday: "short", year: "numeric", month: "short", day: "numeric" };
-          // const formattedDate = joinedDate.toLocaleDateString("en-US", options);
           const joinedDate = new Date(data.createdAt); // Assuming createdAt is a Firestore Timestamp
-
+          const birthdate = new Date(data.birthday.seconds * 1000);
+          console.log("date: " + birthdate);
           const options = { year: "numeric", month: "short", day: "numeric" };
           const formattedDate = joinedDate.toLocaleDateString("en-US", options);
 
@@ -48,7 +54,9 @@ const SimpleTable = () => {
             id: doc.id,
             name: data.name || "",
             city: data.city || "",
-            birthdate: data.birthday || "",
+            // birthdate: data.birthday || "",
+            birthdate: birthdate || "",
+            reason: data.reason,
             createdAt: formattedDate, //? data.createdAt.toDate() : new Date(),
           };
         });
@@ -77,8 +85,9 @@ const SimpleTable = () => {
               <TableRow>
                 <TableCell align="left">Name</TableCell>
                 <TableCell align="left">City</TableCell>
-                <TableCell align="left">Age</TableCell>
+                <TableCell align="left">Reason</TableCell>
                 <TableCell align="left">Joined Date</TableCell>
+                <TableCell align="left">Age</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -88,14 +97,21 @@ const SimpleTable = () => {
                     <Typography fontWeight="bold">{member.name}</Typography>
                   </TableCell>
                   <TableCell align="left" width="20%">
-                    {member.city}
+                    {member.city ? member.city : "(omitted)"}
                   </TableCell>
-                  <TableCell align="left" width="10%">
-                    {calculateAge(member.birthdate)}
+
+                  <TableCell align="left" width="20%">
+                    {member.reason}
                   </TableCell>
                   <TableCell align="left" width="20%">
-                    {/* {member.createdAt.toLocaleDateString()} */}
                     {member.createdAt.toString()}
+                  </TableCell>
+                  <TableCell align="left" width="10%">
+                    {Number.isNaN(calculateAge(member.birthdate)) ||
+                    calculateAge(member.birthdate) > 33 ||
+                    calculateAge(member.birthdate) < 15
+                      ? "(omitted)"
+                      : calculateAge(member.birthdate)}
                   </TableCell>
                 </TableRow>
               ))}
