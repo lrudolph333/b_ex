@@ -115,8 +115,8 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
     ({ name, icon, href, route, collapse }) =>
       //only render navbar item if route has a given name (to skip the join route)
       // only render express nexus if user is authenticated
-      name != null &&
-      (name != "Express Nexus" || (name == "Express Nexus" && username)) && (
+      name != null && (
+        // (name != "Express Nexus" || (name == "Express Nexus" && username)) && (
         <DefaultNavbarDropdown
           key={name}
           name={name}
@@ -555,7 +555,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
             ) : (
               <MKButton
                 component="a"
-                href={"#"}
+                href={"https://discord.gg/R5Q3XEzSX9"}
                 target="_blank"
                 rel="noreferrer"
                 color={"primary"}

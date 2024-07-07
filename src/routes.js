@@ -50,11 +50,11 @@ import SignIn from "./pages/LandingPages/SignIn/index";
 // Sections
 
 const routes = [
-  {
-    name: "Express Nexus",
-    icon: <Icon>article</Icon>,
-    href: "https://discord.gg/R5Q3XEzSX9",
-  },
+  // {
+  //   name: "Express Nexus",
+  //   icon: <Icon>article</Icon>,
+  //   href: "https://discord.gg/R5Q3XEzSX9",
+  // },
   {
     name: "Library",
     icon: <Icon>article</Icon>,
