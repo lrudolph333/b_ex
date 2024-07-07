@@ -1,4 +1,3 @@
-/* eslint-disable no-param-reassign */
 /**
 =========================================================
 * Material Kit 2 React - v2.1.0
@@ -27,6 +26,7 @@ import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
 import Grid from "@mui/material/Grid";
 import Grow from "@mui/material/Grow";
+import Hidden from "@mui/material/Hidden";
 import Icon from "@mui/material/Icon";
 import MuiLink from "@mui/material/Link";
 import Popper from "@mui/material/Popper";
@@ -114,7 +114,9 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
   const renderNavbarItems = routes.map(
     ({ name, icon, href, route, collapse }) =>
       //only render navbar item if route has a given name (to skip the join route)
-      name != null && (
+      // only render express nexus if user is authenticated
+      name != null &&
+      (name != "Express Nexus" || (name == "Express Nexus" && username)) && (
         <DefaultNavbarDropdown
           key={name}
           name={name}
@@ -503,18 +505,35 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
         })}
       >
         <MKBox display="flex" justifyContent="space-between" alignItems="center">
-          <MKBox
-            component={Link}
-            to="/"
-            lineHeight={1}
-            py={transparent ? 1.5 : 0.75}
-            pl={relative || transparent ? 0 : { xs: 0, lg: 1 }}
-          >
-            <MKTypography variant="button" fontWeight="bold" color={light ? "white" : "dark"}>
-              {brand}
-            </MKTypography>
-          </MKBox>
-
+          <Hidden xsDown>
+            {username ? (
+              <MKBox
+                component={Link}
+                to="/"
+                lineHeight={1}
+                py={transparent ? 1.5 : 0.75}
+                mx={2}
+                pl={relative || transparent ? 0 : { xs: 0, lg: 1 }}
+              >
+                <MKTypography variant="button" fontWeight="bold" color={"primary"}>
+                  {/* <MKTypography variant="button" fontWeight="bold" color={light ? "white" : "dark"}> */}
+                  {"Welcome, " + username}
+                </MKTypography>
+              </MKBox>
+            ) : (
+              <MKBox
+                component={Link}
+                to="/"
+                lineHeight={1}
+                py={transparent ? 1.5 : 0.75}
+                pl={relative || transparent ? 0 : { xs: 0, lg: 1 }}
+              >
+                <MKTypography variant="button" fontWeight="bold" color={light ? "white" : "dark"}>
+                  {brand}
+                </MKTypography>
+              </MKBox>
+            )}
+          </Hidden>
           <MKBox
             color="inherit"
             display={{ xs: "none", lg: "flex" }}
@@ -524,55 +543,44 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
             {renderNavbarItems}
           </MKBox>
           <MKBox ml={{ xs: "auto", lg: 0 }}>
-            {action &&
-              (action.type === "internal" ? (
-                <MKButton
-                  component={Link}
-                  to={action.route}
-                  // variant={
-                  //   action.color === "white" || action.color === "default"
-                  //     ? "contained"
-                  //     : "gradient"
-                  // }
-                  // color={action.color || theme.palette.primary.main} // color={action.color ? action.color : "primary"}
-                  color={action.color || "primary"} // color={action.color ? action.color : "primary"}
-                  size="small"
-                >
-                  {action.label}
-                </MKButton>
-              ) : (
-                <MKButton
-                  component="a"
-                  href={action.route}
-                  target="_blank"
-                  rel="noreferrer"
-                  variant={
-                    action.color === "white" || action.color === "default"
-                      ? "contained"
-                      : "gradient"
-                  }
-                  color={action.color ? action.color : "primary"}
-                  size="small"
-                >
-                  {action.label}
-                </MKButton>
-              ))}
+            {action ? (
+              <MKButton
+                component={Link}
+                to={action.route}
+                color={action.color || "primary"} // color={action.color ? action.color : "primary"}
+                size="small"
+              >
+                {action.label}
+              </MKButton>
+            ) : (
+              <MKButton
+                component="a"
+                href={"#"}
+                target="_blank"
+                rel="noreferrer"
+                color={"primary"}
+                size="small"
+              >
+                {"Express Nexus"}
+              </MKButton>
+            )}
           </MKBox>
-          {username && (
-            <MKBox
-              component={Link}
-              to="/"
-              lineHeight={1}
-              py={transparent ? 1.5 : 0.75}
-              mx={2}
-              pl={relative || transparent ? 0 : { xs: 0, lg: 1 }}
-            >
-              <MKTypography variant="button" fontWeight="bold" color={"primary"}>
-                {/* <MKTypography variant="button" fontWeight="bold" color={light ? "white" : "dark"}> */}
-                {"Welcome, " + username}
-              </MKTypography>
-            </MKBox>
-          )}
+          {/* {username && (
+            <Hidden xsDown>
+              <MKBox
+                component={Link}
+                to="/"
+                lineHeight={1}
+                py={transparent ? 1.5 : 0.75}
+                mx={2}
+                pl={relative || transparent ? 0 : { xs: 0, lg: 1 }}
+              >
+                <MKTypography variant="button" fontWeight="bold" color={"primary"}>
+                  {"Welcome, " + username}
+                </MKTypography>
+              </MKBox>
+            </Hidden>
+          )} */}
           <MKBox
             display={{ xs: "inline-block", lg: "none" }}
             lineHeight={0}

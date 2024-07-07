@@ -51,6 +51,11 @@ import SignIn from "./pages/LandingPages/SignIn/index";
 
 const routes = [
   {
+    name: "Express Nexus",
+    icon: <Icon>article</Icon>,
+    href: "https://discord.gg/R5Q3XEzSX9",
+  },
+  {
     name: "Library",
     icon: <Icon>article</Icon>,
     href: "https://brothas-express.notion.site/Brothas-Express-Library-5bf8e9d563014258bf168224f99bb553",
