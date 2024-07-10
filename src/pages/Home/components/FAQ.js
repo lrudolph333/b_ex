@@ -20,7 +20,7 @@ const faqs = [
   {
     question: "How do I join Brothas Express?",
     answer:
-      'You can join by clicking the "Join" button on our homepage and filling out the registration form. This will give you unlimited access to all components of our online community, including the Nexus and the Library.',
+      'You can join by clicking the "Sign Up" button on our homepage and filling out the registration form. This will give you unlimited access to all components of our online community, including the Nexus and the Library.',
   },
   {
     question: "What are the benefits of joining?",

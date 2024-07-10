@@ -97,7 +97,7 @@ function HeaderOne(user) {
                     alignItems="center"
                   >
                     <MKButton color="primary" href="/join">
-                      Join
+                      Sign Up
                     </MKButton>
                     <MKButton
                       variant="outlined"

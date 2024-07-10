@@ -96,7 +96,7 @@ function SignInBasic() {
             : {
                 type: "internal",
                 route: "/join",
-                label: "Join",
+                label: "Sign Up",
                 color: "primary",
               }
         }
