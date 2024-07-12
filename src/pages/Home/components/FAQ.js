@@ -145,6 +145,7 @@ const FAQSection = () => {
               borderRadius: "15px",
             }}
             key={index}
+            id={`faq-${index}`}
           >
             <AccordionSummary
               sx={{
