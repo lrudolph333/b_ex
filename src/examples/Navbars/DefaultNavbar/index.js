@@ -561,7 +561,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
                 color={"primary"}
                 size="small"
               >
-                {"Express Nexus"}
+                {"Discord"}
               </MKButton>
             )}
           </MKBox>
