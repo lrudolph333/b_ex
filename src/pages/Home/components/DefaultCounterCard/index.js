@@ -63,7 +63,7 @@ DefaultCounterCard.propTypes = {
     "dark",
   ]),
   count: PropTypes.number.isRequired,
-  title: PropTypes.string,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   description: PropTypes.string,
 };
 

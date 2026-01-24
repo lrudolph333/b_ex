@@ -18,6 +18,7 @@ import { Box } from "@mui/material";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
+import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 
 // Material Kit 2 React components
@@ -116,9 +117,16 @@ function FeaturesOne() {
                     pl={2}
                   >
                     {" "}
-                    {
-                      " A growing Library of curated content from thought-leaders, scholars, and peers"
-                    }
+                    A growing{" "}
+                    <Link
+                      href="https://brothas-express.notion.site/Brothas-Express-Library-5bf8e9d563014258bf168224f99bb553"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      sx={{ color: "inherit", textDecoration: "underline" }}
+                    >
+                      Library
+                    </Link>{" "}
+                    of curated content from thought-leaders, scholars, and peers
                   </MKTypography>
                 </Grid>
               </Grid>

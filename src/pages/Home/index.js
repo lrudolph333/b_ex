@@ -13,8 +13,6 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { useEffect, useState } from "react";
 // @mui material components
 import Card from "@mui/material/Card";
 
@@ -38,26 +36,10 @@ import Profile from "./sections/Profile";
 // Images
 
 function Home() {
-  const [user, setUser] = useState(null);
-  useEffect(() => {
-    const auth = getAuth();
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        // console.log("user: " + user);
-        setUser(user);
-      } else {
-        setUser(null);
-      }
-    });
-
-    // Cleanup subscription on unmount
-    return () => unsubscribe();
-  }, []);
-
   return (
     <>
       <MKBox display="flex" flexDirection="column" bgColor="dark">
-        <HeaderOne user={user}></HeaderOne>
+        <HeaderOne></HeaderOne>
         <Card
           sx={{
             p: 2,

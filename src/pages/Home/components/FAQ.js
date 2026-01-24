@@ -6,27 +6,13 @@ import {
   Box,
   Container,
   Grid,
+  Link,
   Typography,
 } from "@mui/material";
 import Fade from "@mui/material/Fade";
 import MKTypography from "components/MKTypography";
 
 const faqs = [
-  // {
-  //   question: "What is brothas express?",
-  //   answer:
-  //     "brothas express is an online reflective conversation space to redefine thriving manhood for Black men.",
-  // },
-  {
-    question: "How do I join brothas express?",
-    answer:
-      'You can join by clicking the "Sign Up" button on our homepage and filling out the registration form. This will give you unlimited access to all components of our online community, including the Nexus and the Library.',
-  },
-  {
-    question: "What are the benefits of joining?",
-    answer:
-      "Members gain access to exclusive community spaces, and a supportive network of individuals on the same journey.",
-  },
   {
     question: "What inspired the creation of brothas express? ",
     answer:
@@ -35,33 +21,9 @@ const faqs = [
       " \n\nWe want to change that.",
   },
   {
-    question: "How do I join the virtual discussion each week?",
+    question: "Is there a virtual option to join?",
     answer:
-      "After joining brothas express on our website, the homepage will have a button to 'Enter the Express Nexus'." +
-      " \nThis will take you to our online community forum, which contains a voice channel. Click on the voice channel during our weekly meeting time, and you're in!",
-  },
-  {
-    question: "What is 'Express Nexus'?",
-    answer:
-      "Express Nexus is an online forum for us to connect, share advice, share a laugh, hop in virtual meeting spaces, and build a sense of community. " +
-      " It is hosted on Discord, which provides helpful features and easy functionality to create our space.",
-  },
-  {
-    question: "What does a typical brothas express discussion look like?",
-    answer:
-      "Our virtual (in-person on the way!) discussions last 60-90 minutes and follow the same format. We start by briefly expressing current challenges and victorys in our life. " +
-      " \nThen we watch/read/listen to a curated piece of content to introduce a particular theme. " +
-      " \nFrom there we facilitate an intentional discussion to explore how this issue manifests in our lives, what affects it has, and how we can unsubscribe from the damage it may cause. " +
-      "\nLastly, all present members commit to one action or change of behavior for the next week and beyond, in light of the conversation had. ",
-  },
-  {
-    question: "How does brothas express ensure a safe discussion space?",
-    answer:
-      "We have created simple, specific discussion rules to help foster a constructive, respectful space. More details can be found in our Library's homepage. In no particular order, these rules are: " +
-      ' \n1.) Speak from the "I" perspective ' +
-      " \n2.) Respect other's truth " +
-      " \n3.) Don't use names " +
-      " \n4.) Be vulnerable ",
+      "No, we are fully in person community as of today. If you want us to come to your city, school, or organization please reach out to us via Instagram.",
   },
   {
     question: "Are there any requirements or expectations to participate in discussions?",
@@ -85,14 +47,30 @@ const faqs = [
   },
   {
     question: "I'm too busy to ever join the weekly discussion space. What should I do?",
-    answer:
-      "Understandable. If you won't make time for the weekly discussion space, there is still great value in joining Express Nexus, and digesting content from our Library.",
+    answer: (
+      <>
+        Understandable. If you won&apos;t make time for the weekly discussion space, there is still
+        great value in following our socials, and exploring our{" "}
+        <Link
+          href="https://brothas-express.notion.site/Brothas-Express-Library-5bf8e9d563014258bf168224f99bb553"
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{
+            color: "primary.main",
+            textDecoration: "underline",
+          }}
+        >
+          Library
+        </Link>
+        .
+      </>
+    ),
   },
   {
     question: "Does brothas express collaborate with other organizations?",
     answer:
       "While we do pull content from other organizations exploring masculinity and Blackness, we are not currently in long-term partnership with anyone. " +
-      " We do partner with organizations for one-off or occasional collab events. If this interests you, please reach out to us via email or IG.",
+      " We do partner with organizations for one-off or occasional collab events. If this interests you, please reach out to us via Instagram.",
   },
   {
     question: "How much does it cost to particpate?",
@@ -109,14 +87,41 @@ const faqs = [
   },
   {
     question: "I'm not Black or male. How can I participate?",
-    answer:
-      "Yes. While we want to keep the online spaces exclusive to Black men, we invite anyone to browse our Library, tap-in with our social networks, and spread the word to others.",
+    answer: (
+      <>
+        Yes. While this space is exclusive to Black men, we invite anyone to browse our{" "}
+        <Link
+          href="https://brothas-express.notion.site/Brothas-Express-Library-5bf8e9d563014258bf168224f99bb553"
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{ color: "primary.main", textDecoration: "underline" }}
+        >
+          Library
+        </Link>
+        , tap-in with our social networks, and spread the word to others.
+      </>
+    ),
   },
   {
     question: "I'm not Black or male. How can I support the mission?",
-    answer:
-      "Tap in with our socials and spread the word to others, as we are looking to grow via word of mouth. " +
-      " For bonus points, take time to browse our Library and educate yourself on some of the topics we are discussing in-depth.",
+    answer: (
+      <>
+        Tap in with our socials and spread the word to others, as we are looking to grow via word of
+        mouth. For bonus points, take time to browse our{" "}
+        <Link
+          href="https://brothas-express.notion.site/Brothas-Express-Library-5bf8e9d563014258bf168224f99bb553"
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{
+            color: "primary.main",
+            textDecoration: "underline",
+          }}
+        >
+          Library
+        </Link>{" "}
+        and educate yourself on some of the topics we are discussing in-depth.
+      </>
+    ),
   },
 ];
 

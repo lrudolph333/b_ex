@@ -17,6 +17,7 @@ Coded by www.creative-tim.com
 import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
 import Grid from "@mui/material/Grid";
+import Link from "@mui/material/Link";
 
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
@@ -58,7 +59,19 @@ function Counters() {
             <DefaultCounterCard
               count={3}
               color={"secondary.light"}
-              title="Browse the library"
+              title={
+                <>
+                  Browse the{" "}
+                  <Link
+                    href="https://brothas-express.notion.site/Brothas-Express-Library-5bf8e9d563014258bf168224f99bb553"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{ color: "inherit", textDecoration: "underline" }}
+                  >
+                    library
+                  </Link>
+                </>
+              }
               description="We have detailed episode guides that walk you through particular aspects of masculinity, take it at your own pace."
             />
           </Grid>
