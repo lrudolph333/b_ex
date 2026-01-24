@@ -145,7 +145,7 @@ function SignInBasic() {
                   color="white"
                   mt={1}
                 >
-                  Join Brothas Express
+                  Join brothas express
                 </MKTypography>
               </MKBox>
               <MKBox pt={4} pb={3} px={3}>

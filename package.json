@@ -1,10 +1,10 @@
 {
-  "name": "Brothas Express",
+  "name": "brothas express",
   "version": "1.0.0",
   "private": true,
   "author": "Trey",
   "license": "See license in https://www.creative-tim.com/license",
-  "description": "Brothas Express community page",
+  "description": "brothas express community page",
   "dependencies": {
     "@emotion/cache": "11.10.7",
     "@emotion/react": "11.10.6",

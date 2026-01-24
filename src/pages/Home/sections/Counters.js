@@ -41,7 +41,7 @@ function Counters() {
               count={1}
               color={"secondary.light"}
               // suffix="+"
-              title="Join Brothas Express"
+              title="Join brothas express"
               description="Complete a 60 second form to receive full access to the Express Nexus, Library, and discussion Calendar."
             />
           </Grid>

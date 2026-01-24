@@ -13,12 +13,12 @@ import MKTypography from "components/MKTypography";
 
 const faqs = [
   // {
-  //   question: "What is Brothas Express?",
+  //   question: "What is brothas express?",
   //   answer:
-  //     "Brothas Express is an online reflective conversation space to redefine thriving manhood for Black men.",
+  //     "brothas express is an online reflective conversation space to redefine thriving manhood for Black men.",
   // },
   {
-    question: "How do I join Brothas Express?",
+    question: "How do I join brothas express?",
     answer:
       'You can join by clicking the "Sign Up" button on our homepage and filling out the registration form. This will give you unlimited access to all components of our online community, including the Nexus and the Library.',
   },
@@ -28,7 +28,7 @@ const faqs = [
       "Members gain access to exclusive community spaces, and a supportive network of individuals on the same journey.",
   },
   {
-    question: "What inspired the creation of Brothas Express? ",
+    question: "What inspired the creation of brothas express? ",
     answer:
       "We feel like Black men don't have enough channels to deeply unpack the toxic lessons patriarchal society ingrains in us." +
       " Everyday destructive masculine ideals are celebrated on full-display, encouraging us to embrace self-destructive behaviors and attitudes." +
@@ -37,7 +37,7 @@ const faqs = [
   {
     question: "How do I join the virtual discussion each week?",
     answer:
-      "After joining Brothas Express on our website, the homepage will have a button to 'Enter the Express Nexus'." +
+      "After joining brothas express on our website, the homepage will have a button to 'Enter the Express Nexus'." +
       " \nThis will take you to our online community forum, which contains a voice channel. Click on the voice channel during our weekly meeting time, and you're in!",
   },
   {
@@ -47,7 +47,7 @@ const faqs = [
       " It is hosted on Discord, which provides helpful features and easy functionality to create our space.",
   },
   {
-    question: "What does a typical Brothas Express discussion look like?",
+    question: "What does a typical brothas express discussion look like?",
     answer:
       "Our virtual (in-person on the way!) discussions last 60-90 minutes and follow the same format. We start by briefly expressing current challenges and victorys in our life. " +
       " \nThen we watch/read/listen to a curated piece of content to introduce a particular theme. " +
@@ -55,7 +55,7 @@ const faqs = [
       "\nLastly, all present members commit to one action or change of behavior for the next week and beyond, in light of the conversation had. ",
   },
   {
-    question: "How does Brothas Express ensure a safe discussion space?",
+    question: "How does brothas express ensure a safe discussion space?",
     answer:
       "We have created simple, specific discussion rules to help foster a constructive, respectful space. More details can be found in our Library's homepage. In no particular order, these rules are: " +
       ' \n1.) Speak from the "I" perspective ' +
@@ -89,7 +89,7 @@ const faqs = [
       "Understandable. If you won't make time for the weekly discussion space, there is still great value in joining Express Nexus, and digesting content from our Library.",
   },
   {
-    question: "Does Brothas Express collaborate with other organizations?",
+    question: "Does brothas express collaborate with other organizations?",
     answer:
       "While we do pull content from other organizations exploring masculinity and Blackness, we are not currently in long-term partnership with anyone. " +
       " We do partner with organizations for one-off or occasional collab events. If this interests you, please reach out to us via email or IG.",
@@ -102,7 +102,7 @@ const faqs = [
 
   {
     question:
-      "How does Brothas Express handle confidentiality and privacy concerns within the discussion group?",
+      "How does brothas express handle confidentiality and privacy concerns within the discussion group?",
     answer:
       "While there are no contracts to be signed, members are expected to respect the confidentiality of others, and keep vulnerable information within the community. " +
       " Each individual chooses how much trust to give to other members, and should only share what they feel comfortable sharing. ",

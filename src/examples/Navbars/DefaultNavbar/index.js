@@ -571,7 +571,7 @@ function DefaultNavbar({ brand, routes, transparent, light, sticky, relative, ce
 
 // Setting default values for the props of DefaultNavbar
 DefaultNavbar.defaultProps = {
-  brand: "Brothas Express",
+  brand: "brothas express",
   transparent: false,
   light: false,
   sticky: false,

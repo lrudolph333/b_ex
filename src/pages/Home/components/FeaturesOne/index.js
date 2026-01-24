@@ -31,7 +31,7 @@ function FeaturesOne() {
         <Grid container alignItems="center">
           <Grid item xs={12} lg={5}>
             <MKTypography variant="h3" my={2}>
-              How does Brothas Express work?
+              How does brothas express work?
             </MKTypography>
             <MKTypography variant="body1" color="text" mb={2}>
               <MKTypography variant="body1" color="text" mb={0}>

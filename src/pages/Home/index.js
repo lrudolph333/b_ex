@@ -23,7 +23,6 @@ import MKBox from "components/MKBox";
 
 // Material Kit 2 React examples
 import Divider from "@mui/material/Divider";
-import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import FeaturesOne from "./components/FeaturesOne";
 import SimpleFooter from "./components/SimpleFooter";
 // Home page sections
@@ -32,7 +31,6 @@ import SimpleFooter from "./components/SimpleFooter";
 import FAQSection from "./components/FAQ";
 // Routes
 import footerRoutes from "footer.routes";
-import routes from "routes";
 // PageHeaders page components
 import SimpleTable from "./components/SimpleTable";
 import Counters from "./sections/Counters";
@@ -59,22 +57,6 @@ function Home() {
 
   return (
     <>
-      <DefaultNavbar
-        routes={routes}
-        // action={
-        //   user
-        //     ? //TODO implement logout functionality
-        //       null
-        //     : {
-        //         type: "internal",
-        //         route: "/join",
-        //         label: "Sign Up",
-        //         color: "primary",
-        //       }
-        // }
-        sticky
-      />
-
       <MKBox display="flex" flexDirection="column" bgColor="dark">
         <HeaderOne user={user}></HeaderOne>
         <Card
