@@ -61,17 +61,17 @@ function Home() {
     <>
       <DefaultNavbar
         routes={routes}
-        action={
-          user
-            ? //TODO implement logout functionality
-              null
-            : {
-                type: "internal",
-                route: "/join",
-                label: "Sign Up",
-                color: "primary",
-              }
-        }
+        // action={
+        //   user
+        //     ? //TODO implement logout functionality
+        //       null
+        //     : {
+        //         type: "internal",
+        //         route: "/join",
+        //         label: "Sign Up",
+        //         color: "primary",
+        //       }
+        // }
         sticky
       />
 

@@ -33,7 +33,6 @@ import Popper from "@mui/material/Popper";
 
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
-import MKButton from "components/MKButton";
 import MKTypography from "components/MKTypography";
 
 // Material Kit 2 React example components
@@ -44,7 +43,7 @@ import DefaultNavbarMobile from "examples/Navbars/DefaultNavbar/DefaultNavbarMob
 import breakpoints from "assets/theme/base/breakpoints";
 import { doc, firestore, getDoc } from "../../../firebaseConfig"; // adjust the path as necessary
 
-function DefaultNavbar({ brand, routes, transparent, light, action, sticky, relative, center }) {
+function DefaultNavbar({ brand, routes, transparent, light, sticky, relative, center }) {
   const [dropdown, setDropdown] = useState("");
   const [dropdownEl, setDropdownEl] = useState("");
   const [dropdownName, setDropdownName] = useState("");
@@ -542,45 +541,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
           >
             {renderNavbarItems}
           </MKBox>
-          <MKBox ml={{ xs: "auto", lg: 0 }}>
-            {action ? (
-              <MKButton
-                component={Link}
-                to={action.route}
-                color={action.color || "primary"} // color={action.color ? action.color : "primary"}
-                size="small"
-              >
-                {action.label}
-              </MKButton>
-            ) : (
-              <MKButton
-                component="a"
-                href={"https://discord.gg/R5Q3XEzSX9"}
-                target="_blank"
-                rel="noreferrer"
-                color={"primary"}
-                size="small"
-              >
-                {"Discord"}
-              </MKButton>
-            )}
-          </MKBox>
-          {/* {username && (
-            <Hidden xsDown>
-              <MKBox
-                component={Link}
-                to="/"
-                lineHeight={1}
-                py={transparent ? 1.5 : 0.75}
-                mx={2}
-                pl={relative || transparent ? 0 : { xs: 0, lg: 1 }}
-              >
-                <MKTypography variant="button" fontWeight="bold" color={"primary"}>
-                  {"Welcome, " + username}
-                </MKTypography>
-              </MKBox>
-            </Hidden>
-          )} */}
+
           <MKBox
             display={{ xs: "inline-block", lg: "none" }}
             lineHeight={0}
@@ -613,7 +574,6 @@ DefaultNavbar.defaultProps = {
   brand: "Brothas Express",
   transparent: false,
   light: false,
-  action: false,
   sticky: false,
   relative: false,
   center: false,
@@ -625,26 +585,6 @@ DefaultNavbar.propTypes = {
   routes: PropTypes.arrayOf(PropTypes.shape).isRequired,
   transparent: PropTypes.bool,
   light: PropTypes.bool,
-  action: PropTypes.oneOfType([
-    PropTypes.bool,
-    PropTypes.shape({
-      type: PropTypes.oneOf(["external", "internal"]).isRequired,
-      route: PropTypes.string.isRequired,
-      color: PropTypes.oneOf([
-        "primary",
-        "secondary",
-        "info",
-        "success",
-        "warning",
-        "error",
-        "dark",
-        "light",
-        "default",
-        "white",
-      ]),
-      label: PropTypes.string.isRequired,
-    }),
-  ]),
   sticky: PropTypes.bool,
   relative: PropTypes.bool,
   center: PropTypes.bool,

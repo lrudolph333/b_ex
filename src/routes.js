@@ -42,8 +42,6 @@ Coded by www.creative-tim.com
 import { Icon } from "@mui/material";
 
 // Pages
-import FinishSignUp from "pages/Home/components/finishSignUp";
-import SignIn from "./pages/LandingPages/SignIn/index";
 //View content (link to notion)
 //FAQ
 
@@ -59,17 +57,6 @@ const routes = [
     name: "Library",
     icon: <Icon>article</Icon>,
     href: "https://brothas-express.notion.site/Brothas-Express-Library-5bf8e9d563014258bf168224f99bb553",
-  },
-  {
-    name: "Newsletter",
-    icon: <Icon>mail</Icon>,
-    href: "https://brothas-express.beehiiv.com/",
-  },
-  { route: "/finishSignUp", component: <FinishSignUp></FinishSignUp> },
-  {
-    // icon: <Icon>dashboard</Icon>,
-    route: "/join",
-    component: <SignIn />,
   },
 ];
 
