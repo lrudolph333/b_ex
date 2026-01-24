@@ -33,11 +33,6 @@ function FeaturesOne() {
             <MKTypography variant="h3" my={2}>
               How does brothas express work?
             </MKTypography>
-            <MKTypography variant="body1" color="text" mb={2}>
-              <MKTypography variant="body1" color="text" mb={0}>
-                {"How do we carry out our mission?"}
-              </MKTypography>
-            </MKTypography>
 
             {/* <MKTypography
               component="a"

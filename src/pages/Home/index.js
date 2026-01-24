@@ -23,16 +23,15 @@ import MKBox from "components/MKBox";
 
 // Material Kit 2 React examples
 import Divider from "@mui/material/Divider";
-import FeaturesOne from "./components/FeaturesOne";
 import SimpleFooter from "./components/SimpleFooter";
 // Home page sections
 
 // Home page components
 import FAQSection from "./components/FAQ";
+import Testimonials from "./components/Testimonials";
 // Routes
 import footerRoutes from "footer.routes";
 // PageHeaders page components
-import SimpleTable from "./components/SimpleTable";
 import Counters from "./sections/Counters";
 import HeaderOne from "./sections/HeaderOne";
 import Profile from "./sections/Profile";
@@ -70,21 +69,14 @@ function Home() {
             boxShadow: ({ boxShadows: { xxl } }) => xxl,
           }}
         >
-          {/** Introduction */}
-          <FeaturesOne></FeaturesOne>
+          {/** Testimonials */}
+          <Testimonials></Testimonials>
           <Divider
             variant="middle"
             sx={{ marginLeft: "25%", marginRight: "25%", bgcolor: "text.main" }}
           />
           {/** How to get involved */}
           <Counters></Counters>
-          <Divider
-            variant="middle"
-            sx={{ marginLeft: "25%", marginRight: "25%", bgcolor: "text.main" }}
-          />
-          {/** Members */}
-          {/* <Team></Team> */}
-          <SimpleTable></SimpleTable>
           <Divider
             variant="middle"
             sx={{ marginLeft: "25%", marginRight: "25%", bgcolor: "text.main" }}

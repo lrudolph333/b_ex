@@ -40,9 +40,8 @@ function Counters() {
             <DefaultCounterCard
               count={1}
               color={"secondary.light"}
-              // suffix="+"
-              title="Join brothas express"
-              description="Complete a 60 second form to receive full access to the Express Nexus, Library, and discussion Calendar."
+              title="Tap in with the socials"
+              description="We post all recaps of our episodes here so you can learn with us."
             />
           </Grid>
           <Grid item xs={12} md={4} display="flex">
@@ -50,9 +49,8 @@ function Counters() {
             <DefaultCounterCard
               count={2}
               color={"secondary.light"}
-              // suffix="+"
-              title="Browse the Library"
-              description="Explore all of our curated content, session guides, and more in an organized, one-stop-shop."
+              title="Show up"
+              description="The most transformational learning happens in community, so come to an episode."
             />
             <Divider orientation="vertical" sx={{ display: { xs: "none", md: "block" }, ml: 0 }} />
           </Grid>
@@ -60,8 +58,8 @@ function Counters() {
             <DefaultCounterCard
               count={3}
               color={"secondary.light"}
-              title="Enter the Express Nexus"
-              description="Enter our platform to connect with other Black men on the same journey."
+              title="Browse the library"
+              description="We have detailed episode guides that walk you through particular aspects of masculinity, take it at your own pace."
             />
           </Grid>
         </Grid>
