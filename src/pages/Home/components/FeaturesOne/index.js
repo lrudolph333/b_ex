@@ -88,7 +88,7 @@ function FeaturesOne() {
                     pl={2}
                   >
                     {" "}
-                    {"Weekly discussion sessions on specific topics related to masculinity"}
+                    {"Bi-weekly dinner discussions that unpack a specific theme of masculinity"}
                   </MKTypography>
                 </Grid>
               </Grid>
@@ -153,9 +153,7 @@ function FeaturesOne() {
                     sx={{ color: "text.focus" }}
                     pl={2}
                   >
-                    {
-                      "Exclusive access to Express Nexus, an online space to share thoughts and ask advice of each other whenever"
-                    }
+                    {"A community chat to connect with like minded brothers around the city"}
                   </MKTypography>
                 </Grid>
               </Grid>

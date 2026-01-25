@@ -26,6 +26,7 @@ import SimpleFooter from "./components/SimpleFooter";
 
 // Home page components
 import FAQSection from "./components/FAQ";
+import FeaturesOne from "./components/FeaturesOne";
 import Testimonials from "./components/Testimonials";
 // Routes
 import footerRoutes from "footer.routes";
@@ -51,6 +52,12 @@ function Home() {
             boxShadow: ({ boxShadows: { xxl } }) => xxl,
           }}
         >
+          {/** How does it work */}
+          <FeaturesOne></FeaturesOne>
+          <Divider
+            variant="middle"
+            sx={{ marginLeft: "25%", marginRight: "25%", bgcolor: "text.main" }}
+          />
           {/** Testimonials */}
           <Testimonials></Testimonials>
           <Divider
