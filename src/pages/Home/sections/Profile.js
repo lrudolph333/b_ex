@@ -24,7 +24,7 @@ import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
 // Images
-import profilePicture from "assets/images/grad_pic.jpg";
+import profilePicture from "assets/images/founder_headshot.jpg";
 
 function Profile() {
   return (

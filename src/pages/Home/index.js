@@ -70,15 +70,16 @@ function Home() {
             variant="middle"
             sx={{ marginLeft: "25%", marginRight: "25%", bgcolor: "text.main" }}
           />
-          {/** Meet the Founder */}
-          <Profile></Profile>
+
+          {/** FAQs */}
+          <FAQSection></FAQSection>
           <Divider
             variant="middle"
             sx={{ marginLeft: "25%", marginRight: "25%", bgcolor: "text.main" }}
           />
 
-          {/** FAQs */}
-          <FAQSection></FAQSection>
+          {/** Meet the Founder */}
+          <Profile></Profile>
         </Card>
         <MKBox pt={6} px={1} mt={6} mb={5}>
           <SimpleFooter content={footerRoutes} light />
