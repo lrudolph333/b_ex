@@ -1,27 +1,24 @@
-@font-face {
-    font-family: "NTSomic";
-    src: url("/public/fonts/NTSomic-Regular.ttf") format("ttf"),
-         url("/public/fonts/NTSomic-Regular.ttf") format("ttf");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-  
-  @font-face {
-    font-family: "NTSomic";
-    src: url("/public/fonts/NTSomic-Medium.ttf") format("ttf"),
-         url("/public/fonts/NTSomic-Medium.ttf") format("ttf");
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-  }
-  
-  @font-face {
-    font-family: "NTSomic";
-    src: url("/public/fonts/NTSomic-Semibold.ttf") format("ttf"),
-         url("/public/fonts/NTSomic-Semibold.ttf") format("ttf");
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-  }
-  
+/* @font-face {
+     font-family: "NTSomic";
+     src: url("/fonts/NTSomic-Regular.ttf") format("truetype");
+     font-weight: 400;
+     font-style: normal;
+     font-display: swap;
+   }
+   
+   @font-face {
+     font-family: "NTSomic";
+     src: url("/fonts/NTSomic-Medium.ttf") format("truetype");
+     font-weight: 500;
+     font-style: normal;
+     font-display: swap;
+   }
+   
+   @font-face {
+     font-family: "NTSomic";
+     src: url("/fonts/NTSomic-Semibold.ttf") format("truetype");
+     font-weight: 600;
+     font-style: normal;
+     font-display: swap;
+   }
+    */
