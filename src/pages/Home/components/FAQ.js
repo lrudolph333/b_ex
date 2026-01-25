@@ -15,10 +15,48 @@ import MKTypography from "components/MKTypography";
 const faqs = [
   {
     question: "What inspired the creation of brothas express? ",
-    answer:
-      "We feel like Black men don't have enough channels to deeply unpack the toxic lessons patriarchal society ingrains in us." +
-      " Everyday destructive masculine ideals are celebrated on full-display, encouraging us to embrace self-destructive behaviors and attitudes." +
-      " \n\nWe want to change that.",
+    answer: (
+      <>
+        We feel like Black men don&apos;t have enough channels to deeply unpack the toxic lessons
+        patriarchal society ingrains in us. Everyday destructive masculine ideals are celebrated on
+        full-display, encouraging us to embrace self-destructive behaviors and attitudes.
+        <div></div>
+        We want to change that.{" "}
+        <Link
+          href="https://www.youtube.com/watch?v=bVvXzzHbJrQ"
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{
+            color: "primary.main",
+            textDecoration: "underline",
+          }}
+        >
+          <div></div>I talk more about our origin story here
+        </Link>
+        .
+      </>
+    ),
+  },
+  {
+    question: "What's the Library about?",
+    answer: (
+      <>
+        Best answer is to{" "}
+        <Link
+          href="https://brothas-express.notion.site/Brothas-Express-Library-5bf8e9d563014258bf168224f99bb553"
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{
+            color: "primary.main",
+            textDecoration: "underline",
+          }}
+        >
+          check it out
+        </Link>{" "}
+        for yourself. It is a collection of detailed episodes guides that contain content and
+        guiding questions to move us through the bi-weekly discussions.
+      </>
+    ),
   },
   {
     question: "Is there a virtual option to join?",
@@ -30,11 +68,31 @@ const faqs = [
     answer: "Nope. Come as you are, whenever you can.",
   },
   {
+    question: "How can I host something like brothas express in my own community?",
+    answer: (
+      <>
+        Let&apos;s talk! We are rolling an experimental{" "}
+        <Link
+          href="https://www.notion.so/brothas-express/Becoming-a-conductor-2e969c13219380e39a87cd67281ed1a0"
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{
+            color: "primary.main",
+            textDecoration: "underline",
+          }}
+        >
+          &apos;conducter training&apos;
+        </Link>
+        , which will give you all the tools you need to host these conversations wherever your
+        community is.,
+      </>
+    ),
+  },
+  {
     question: "I'm very ignorant on many things. Is this discussion space for me?",
     answer:
       "Absolutely. We do not care how much feminist literature you have or haven't read. We are all committed to growing in the same direction, no matter where you are starting from.",
   },
-
   {
     question: "Is this only for Black men? Can women/non-binary join? Can other races join?",
     answer:
