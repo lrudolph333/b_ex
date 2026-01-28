@@ -292,7 +292,7 @@ function HeaderOne() {
               justifyContent={"center"}
               alignItems={"center"}
             >
-              <ReactPlayer width="50%" url="https://youtube.com/shorts/WQma8bDLY80" />
+              <ReactPlayer width="50%" url="https://www.youtube.com/watch?v=bVvXzzHbJrQ" />
             </Grid>
           </Grid>
           <Box height={"10vh"} />
