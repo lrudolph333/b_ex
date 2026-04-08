@@ -125,7 +125,7 @@ function FeaturesOne() {
                       sx={{
                         color: "inherit",
                         textDecoration: "underline",
-                        textDecorationColor: "#ffffff",
+                        textDecorationColor: "#fff",
                       }}
                     >
                       library
