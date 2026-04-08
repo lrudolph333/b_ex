@@ -29,31 +29,31 @@ import ReactPlayer from "react-player";
 // Each testimonial will alternate between text-left/video-right and video-left/text-right
 const testimonials = [
   {
-    question: "What would you tell someone who is thinking about joining?",
+    question: "what would you tell someone who is thinking about joining?",
     videoUrl: "https://youtu.be/RhS_8TUMBoY",
   },
   {
-    question: "What's your favorite part of brothas express?",
+    question: "what's your favorite part of brothas express?",
     videoUrl: "https://youtu.be/fHnBcQon_js",
   },
   {
-    question: "What have you gained?",
+    question: "what have you gained?",
     videoUrl: "https://youtu.be/vCYartaacNk",
   },
   {
-    question: "Why did you show up?",
+    question: "why did you show up?",
     videoUrl: "https://youtu.be/VU7lafGAl4k",
   },
   {
-    question: "What made you want to come back?",
+    question: "what made you want to come back?",
     videoUrl: "https://youtu.be/1Xh_cxp5N5U",
   },
   {
-    question: "How would you describe brothas express?",
+    question: "how would you describe brothas express?",
     videoUrl: "https://youtu.be/akNSlyWlOFA",
   },
   {
-    question: "How did you hear about us?",
+    question: "how did you hear about us?",
     videoUrl: "https://youtu.be/H4EbaF2bH6Y",
   },
 ];
@@ -67,7 +67,7 @@ function Testimonials() {
         <Grid container>
           <Grid item xs={12} md={12} sx={{ mb: 6 }}>
             <MKTypography variant="h2" color="primary" textAlign="center">
-              Testimonials
+              testimonials
             </MKTypography>
           </Grid>
         </Grid>

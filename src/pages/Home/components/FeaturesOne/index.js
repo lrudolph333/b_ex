@@ -32,7 +32,7 @@ function FeaturesOne() {
         <Grid container alignItems="center">
           <Grid item xs={12} lg={5}>
             <MKTypography variant="h3" my={2}>
-              How does brothas express work?
+              how does brothas express work?
             </MKTypography>
 
             {/* <MKTypography
@@ -88,7 +88,7 @@ function FeaturesOne() {
                     pl={2}
                   >
                     {" "}
-                    {"Bi-weekly dinner discussions that unpack a specific theme of masculinity"}
+                    {"bi-weekly dinner discussions that unpack a specific theme of masculinity"}
                   </MKTypography>
                 </Grid>
               </Grid>
@@ -117,14 +117,18 @@ function FeaturesOne() {
                     pl={2}
                   >
                     {" "}
-                    A growing{" "}
+                    a growing{" "}
                     <Link
                       href="https://brothas-express.notion.site/Brothas-Express-Library-5bf8e9d563014258bf168224f99bb553"
                       target="_blank"
                       rel="noopener noreferrer"
-                      sx={{ color: "inherit", textDecoration: "underline" }}
+                      sx={{
+                        color: "inherit",
+                        textDecoration: "underline",
+                        textDecorationColor: "#ffffff",
+                      }}
                     >
-                      Library
+                      library
                     </Link>{" "}
                     of curated content from thought-leaders, scholars, and peers
                   </MKTypography>
@@ -153,7 +157,7 @@ function FeaturesOne() {
                     sx={{ color: "text.focus" }}
                     pl={2}
                   >
-                    {"A community chat to connect with like minded brothers around the city"}
+                    {"a community chat to connect with like minded brothers around the city"}
                   </MKTypography>
                 </Grid>
               </Grid>

@@ -32,7 +32,7 @@ function Counters() {
         <Grid container>
           <Grid item xs={12} md={12} sx={{ mb: 6 }}>
             <MKTypography variant="h3" color="primary" textAlign="center">
-              {"How to Get Involved"}
+              {"how to tap in"}
             </MKTypography>
           </Grid>
         </Grid>
@@ -41,7 +41,7 @@ function Counters() {
             <DefaultCounterCard
               count={1}
               color={"secondary.light"}
-              title="Tap in with the socials"
+              title="connect with the socials"
               description="We post all recaps of our episodes here so you can learn with us."
             />
           </Grid>
@@ -50,7 +50,7 @@ function Counters() {
             <DefaultCounterCard
               count={2}
               color={"secondary.light"}
-              title="Show up"
+              title="show up"
               description="The most transformational learning happens in community, so come to an episode."
             />
             <Divider orientation="vertical" sx={{ display: { xs: "none", md: "block" }, ml: 0 }} />
@@ -61,14 +61,13 @@ function Counters() {
               color={"secondary.light"}
               title={
                 <>
-                  Browse the{" "}
                   <Link
                     href="https://brothas-express.notion.site/Brothas-Express-Library-5bf8e9d563014258bf168224f99bb553"
                     target="_blank"
                     rel="noopener noreferrer"
                     sx={{ color: "inherit", textDecoration: "underline" }}
                   >
-                    library
+                    browse the library
                   </Link>
                 </>
               }

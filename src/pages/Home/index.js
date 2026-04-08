@@ -25,6 +25,7 @@ import SimpleFooter from "./components/SimpleFooter";
 // Home page sections
 
 // Home page components
+import Episodes from "./components/Episodes";
 import FAQSection from "./components/FAQ";
 import FeaturesOne from "./components/FeaturesOne";
 import Testimonials from "./components/Testimonials";
@@ -54,6 +55,12 @@ function Home() {
         >
           {/** How does it work */}
           <FeaturesOne></FeaturesOne>
+          <Divider
+            variant="middle"
+            sx={{ marginLeft: "25%", marginRight: "25%", bgcolor: "text.main" }}
+          />
+          {/** Episodes */}
+          <Episodes></Episodes>
           <Divider
             variant="middle"
             sx={{ marginLeft: "25%", marginRight: "25%", bgcolor: "text.main" }}

@@ -33,7 +33,7 @@ function Profile() {
         <Grid container>
           <Grid item xs={12} md={12} sx={{ mb: 6 }}>
             <MKTypography variant="h3" color="primary" textAlign="center">
-              {"Meet the Founder"}
+              {"meet the host"}
             </MKTypography>
           </Grid>
         </Grid>
@@ -51,18 +51,18 @@ function Profile() {
                 mb={1}
               >
                 <MKTypography variant="h3" textAlign="center">
-                  {"Trey Rudolph"}
+                  {"Trey Good"}
                 </MKTypography>
               </MKBox>
               {/* <Container container display="flex" flex-direction="row" justifyContent="flex-start"> */}
               <MKBox display="flex" justifyContent="center" alignItems="center">
                 <IconButton
                   component="a"
-                  href="https://twitter.com/T_Goody3"
+                  href="https://treygood3.substack.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   sx={{
-                    color: "#55acee",
+                    color: "#FF6719",
                     mx: 1,
                     "&:hover": {
                       opacity: 0.8,
@@ -78,7 +78,7 @@ function Profile() {
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                      d="M6 2C5.44772 2 5 2.44772 5 3V22L12 18L19 22V3C19 2.44772 18.5523 2 18 2H6Z"
                       fill="currentColor"
                     />
                   </svg>

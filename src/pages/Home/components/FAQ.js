@@ -190,7 +190,7 @@ const FAQSection = () => {
         <Grid container>
           <Grid item xs={12} md={12} sx={{ mb: 6 }}>
             <MKTypography variant="h3" color="primary" textAlign="center">
-              Frequently Asked Questions
+              questions people have
             </MKTypography>
           </Grid>
         </Grid>
