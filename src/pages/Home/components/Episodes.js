@@ -29,6 +29,10 @@ import ReactPlayer from "react-player";
 // Each testimonial will alternate between text-left/video-right and video-left/text-right
 const episodes = [
   {
+    question: "your money or your life",
+    videoUrl: "https://youtube.com/shorts/8CVxcdosZeM",
+  },
+  {
     question: "the masculinity card",
     videoUrl: "https://youtube.com/shorts/Bt_iSzz2R-4",
   },
